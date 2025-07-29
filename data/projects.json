@@ -8,7 +8,8 @@
     "category": "branding",
     "tags": ["branding", "logo-design"],
     "slug": "nike-brand-identity",
-    "selected": true
+    "selected": true,
+    "header": true
   },
   {
     "id": "spotify-web-app",
@@ -19,7 +20,8 @@
     "category": "development",
     "tags": ["web-development", "react"],
     "slug": "spotify-web-app",
-    "selected": false
+    "selected": false,
+    "header": false
   },
   {
     "id": "coca-cola-social",
@@ -30,6 +32,7 @@
     "category": "marketing",
     "tags": ["social-media", "campaign"],
     "slug": "coca-cola-social",
-    "selected": true
+    "selected": true,
+    "header": true
   }
 ] 

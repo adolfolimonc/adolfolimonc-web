@@ -3,9 +3,13 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Autoplay, EffectFade, Keyboard, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import headerWork from '../../data/header_work.json';
+import projects from '../../data/projects.json';
 import loadBackgroudImages from "@/common/loadBackgroudImages";
+
 function Header() {
+  // Filter projects to only include those with header: true
+  const headerWork = projects.filter(project => project.header === true);
+
   useLayoutEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(".header", { y: 200 }, { y: 0 }, "+=2.5");
