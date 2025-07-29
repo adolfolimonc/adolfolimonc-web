@@ -41,6 +41,22 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Fallback script to ensure page becomes visible */}
+      <Script id="fallback-loader" strategy="afterInteractive">
+        {`
+          // Fallback to ensure page becomes visible after 10 seconds
+          setTimeout(() => {
+            if (!document.body.classList.contains('loaded')) {
+              document.body.classList.add('loaded');
+              const loader = document.querySelector('.loader-wrap');
+              if (loader) {
+                loader.style.display = 'none';
+              }
+            }
+          }, 10000);
+        `}
+      </Script>
+
       <Script
         src="/assets/js/ScrollTrigger.min.js"
         strategy="beforeInteractive"

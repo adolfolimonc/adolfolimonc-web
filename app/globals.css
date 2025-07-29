@@ -1,0 +1,90 @@
+/* Add this at the top of the file to ensure loader is always visible */
+
+/* Import Brutal Milk fonts */
+@font-face {
+  font-family: 'BrutalMilk';
+  src: url('/assets/fonts/BrutalMilkNo1-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BrutalMilk';
+  src: url('/assets/fonts/BrutalMilkNo1-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BrutalMilk';
+  src: url('/assets/fonts/BrutalMilkNo1-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.loader-wrap {
+  position: fixed !important;
+  z-index: 99999999999999 !important;
+  height: 100vh !important;
+  width: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  display: flex !important;
+  overflow: hidden !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+}
+
+/* Update loader text styling to use Brutal Milk font */
+.loader-wrap .loader-wrap-heading .load-text {
+  font-family: 'BrutalMilk', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  letter-spacing: 8px !important;
+  text-transform: uppercase !important;
+  z-index: 20 !important;
+  color: #fff !important;
+}
+
+.loader-wrap .load-text span {
+  animation: loading 1.5s infinite alternate !important;
+  display: inline-block !important;
+}
+
+/* Ensure the loader appears immediately */
+body:not(.loaded) .loader-wrap {
+  display: flex !important;
+}
+
+/* Hide the main content until loader is done but allow scrolling */
+body:not(.loaded) #smooth-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.loaded #smooth-wrapper {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.5s ease;
+}
+
+/* Override existing CSS to allow scrolling */
+body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* Force scrolling to work */
+html {
+  overflow-y: auto !important;
+}
+
+/* Import the existing styles */
+@import '../public/assets/css/plugins.css';
+@import '../public/assets/css/style.css';
