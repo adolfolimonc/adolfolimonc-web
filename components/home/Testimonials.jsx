@@ -40,7 +40,7 @@ function Testimonials() {
               <span className="sub-title main-color mb-5">Testimonials</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
                 <span className="rotate-text">
-                  Trusted <span className="fw-200">by changemakers.</span>
+                  Trusted <span className="fw-200">by changemakers</span>
                 </span>
               </h3>
             </div>

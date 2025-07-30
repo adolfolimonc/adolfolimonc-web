@@ -1,0 +1,20 @@
+{
+  "id": "irco-content-marketing",
+  "title": "IRCO",
+  "subtitle": "Content Marketing",
+  "thumbnail": "/assets/imgs/works/2/1.jpg",
+  "category": "Design",
+  "tags": ["content-marketing", "social-media", "marketing"],
+  "client": "IRCO",
+  "year": "2023",
+  "featured": true,
+  "slug": "irco-content-marketing",
+  "content": {
+    "overview": "IRCO",
+    "images": [
+      { "url": "/assets/imgs/works/2/1.jpg", "caption": "Logo variations" },
+      { "url": "/assets/imgs/works/2/2.jpg", "caption": "Brand guidelines" }
+    ],
+    "details": "Details here!"
+  }
+} 

@@ -14,12 +14,12 @@ function Team() {
                 </span>
               </h3>
             </div>
-         {/*   <div className="ml-auto vi-more">
+           <div className="ml-auto vi-more">
               <a href="/about" className="butn butn-sm butn-bord radius-30">
                 <span>Know more</span>
               </a>
               <span className="icon ti-arrow-top-right"></span>
-            </div> */}
+            </div> 
           </div>
         </div>
         <div className="row md-marg">

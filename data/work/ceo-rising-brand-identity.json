@@ -1,0 +1,20 @@
+{
+  "id": "ceo-rising-brand-identity",
+  "title": "CEO Rising",
+  "subTitle": "Brand Identity",
+  "thumbnail": "/assets/imgs/works/2/3.jpg",
+  "category": "Branding",
+  "tags": ["branding", "logo-design"],
+  "client": "Lena West",
+  "year": "2023",
+  "featured": false,
+  "slug": "ceo-rising-brand-identity",
+  "content": {
+    "overview": "CEO Rising...",
+    "images": [
+      { "url": "/assets/imgs/works/2/3.jpg", "caption": "Instagram stories" },
+      { "url": "/assets/imgs/works/2/4.jpg", "caption": "Facebook ads" }
+    ],
+    "details": "Details here!"
+  }
+} 

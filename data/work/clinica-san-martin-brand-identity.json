@@ -1,0 +1,20 @@
+{
+  "id": "clinica-san-martin-brand-identity",
+  "title": "Clínica San Martín",
+  "subTitle": "Brand Identity",
+  "thumbnail": "/assets/imgs/works/2/2.jpg",
+  "category": "Branding",
+  "tags": ["web-development", "react", "nextjs"],
+  "client": "cliente spotify",
+  "year": "2022",
+  "featured": true,
+  "slug": "clinica-san-martin-brand-identity",
+  "content": {
+    "overview": "Clinica San Martin",
+    "images": [
+      { "url": "/assets/imgs/works/2/2.jpg", "caption": "Landing page" },
+      { "url": "/assets/imgs/works/2/3.jpg", "caption": "User dashboard" }
+    ],
+    "details": "Details here!"
+  }
+} 

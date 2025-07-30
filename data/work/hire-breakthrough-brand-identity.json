@@ -1,0 +1,20 @@
+{
+  "id": "hire-breakthrough-brand-identity",
+  "title": "Hire Breakthrough",
+  "subtitle": "Brand Identity",
+  "thumbnail": "/assets/imgs/works/2/1.jpg",
+  "category": "Design",
+  "tags": ["branding", "logo-design", "visual-identity"],
+  "client": "Hire Breakthrough",
+  "year": "2023",
+  "featured": true,
+  "slug": "hire-breakthrough-brand-identity",
+  "content": {
+    "overview": "Hire Breakthrough",
+    "images": [
+      { "url": "/assets/imgs/works/2/1.jpg", "caption": "Logo variations" },
+      { "url": "/assets/imgs/works/2/2.jpg", "caption": "Brand guidelines" }
+    ],
+    "details": "Details here!"
+  }
+} 
