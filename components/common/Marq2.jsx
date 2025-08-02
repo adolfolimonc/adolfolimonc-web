@@ -26,7 +26,7 @@ function Marq2() {
                 <h4 className="d-flex align-items-center">
                   <span>{item}</span>
                   <span className="icon-img-50 ml-40">
-                    <img src="/assets/imgs/star.png" alt="" />
+                    <img src="/assets/imgs/logo_outline.png" alt="" />
                   </span>
                 </h4>
               </div>

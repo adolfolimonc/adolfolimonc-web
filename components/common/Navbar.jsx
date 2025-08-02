@@ -48,21 +48,21 @@ function Navbar() {
   }
 
   function handleNavLinkClick(e, sectionId, redirectPage) {
+    // Allow middle-click (scroll wheel click) to work normally
+    if (e.button === 1) {
+      // Middle-click - let it work normally by not preventing default
+      return;
+    }
+
+    // Only handle left-click (button 0)
+    if (e.button !== 0) {
+      return;
+    }
+
     e.preventDefault();
 
-    // If we're on the home page, scroll to the section with smooth effect
-    if (pathname === "/") {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    } else {
-      // If we're on another page, redirect to the specific page for this link
-      router.push(redirectPage);
-    }
+    // Always redirect to the corresponding page
+    router.push(redirectPage);
   }
 
   return (
@@ -101,7 +101,7 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className="nav-link"
-                href="#selected-work"
+                href="/work"
                 onClick={(e) =>
                   handleNavLinkClick(e, "selected-work", "/work")
                 }
@@ -116,7 +116,7 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className="nav-link"
-                href="#services"
+                href="/capabilities"
                 onClick={(e) =>
                   handleNavLinkClick(e, "services", "/capabilities")
                 }
@@ -130,7 +130,7 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className="nav-link"
-                href="#about"
+                href="/about"
                 onClick={(e) => handleNavLinkClick(e, "about", "/about")}
               >
                 <span className="rolling-text">About</span>

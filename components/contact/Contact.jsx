@@ -140,7 +140,7 @@ function Contact() {
                         className="butn butn-full butn-bord radius-30"
                         disabled={loading}
                       >
-                        <span className="text">{loading ? 'Sending...' : 'Let&lsquo;s Talk'}</span>
+                        <span className="text">{loading ? 'Sending...' : "Let's Talk"}</span>
                       </button>
                     </div>
                   </div>

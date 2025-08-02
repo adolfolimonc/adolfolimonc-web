@@ -9,7 +9,7 @@ import Header from '@/components/work-details/Header';
 import Challenge from '@/components/work-details/Challenge';
 import Works from '@/components/work-details/Works';
 import Solution from '@/components/work-details/Solution';
-import Wroks2 from '@/components/work-details/Wroks2';
+import Works2 from '@/components/work-details/Works2';
 import Next from '@/components/work-details/Next';
 
 export default function ProjectLayout({ project }) {
@@ -27,7 +27,7 @@ export default function ProjectLayout({ project }) {
             <Challenge project={project} />
             <Works project={project} />
             <Solution project={project} />
-            <Wroks2 project={project} />
+            <Works2 project={project} />
             <Next project={project} />
           </main>
           <Footer />

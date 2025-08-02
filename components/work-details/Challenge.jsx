@@ -1,59 +1,106 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 
 function Challenge({ project }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
+  // Get the single GIF path from project data
+  const gifPath = project.gifImages[0];
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+    setImageError(false);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoaded(false);
+  };
+
+  // Initialize WOW.js for animations
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.WOW) {
+      new window.WOW().init();
+    }
+  }, []);
+
   return (
     <section className="section-padding">
       <div className="container">
-        <div className="info mb-80 pb-20 bord-thin-bottom">
+        <div className="section-padding pt-0">
+          <div className="container">
+          <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
+
+              {!imageError && gifPath ? (
+                <img 
+                  src={gifPath} 
+                  alt={`${project?.title || "Project"} GIF`} 
+                  onLoad={handleImageLoad}
+                  onError={handleImageError}
+                  style={{ 
+                    opacity: imageLoaded ? 1 : 0.7,
+                    transition: 'opacity 0.3s ease',
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                />
+              ) : (
+                <div className="error-placeholder wow fadeInUp" data-wow-delay=".1s" style={{
+                  padding: '40px',
+                  textAlign: 'center',
+                  backgroundColor: '#f5f5f5',
+                  borderRadius: '8px'
+                }}>
+                  <p>GIF image could not be loaded</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="info mb-80 pb-20 bord-thin-bottom wow fadeInUp" data-wow-delay=".2s">
           <div className="row">
             <div className="col-md-6 col-lg-3">
               <div className="item mb-30">
-                <span className="opacity-8 mb-5">Category :</span>
-                <h6>{project.category}</h6>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
-              <div className="item mb-30">
-                <span className="opacity-8 mb-5">Client :</span>
+                <span className="opacity-8 mb-5">Client:</span>
                 <h6>{project.client}</h6>
               </div>
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="item mb-30">
-                <span className="opacity-8 mb-5">Start Date :</span>
-                <h6>{project.year}</h6>
+                <span className="opacity-8 mb-5">Services:</span>
+                <h6>{project.services}</h6>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3">
+              <div className="item mb-30">
+                <span className="opacity-8 mb-5">Time:</span>
+                <h6>{project.time}</h6>
               </div>
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="item">
-                <span className="opacity-8 mb-5">Designer :</span>
-                <h6>{project.year}</h6>
+                <span className="opacity-8 mb-5">Category:</span>
+                <h6>{project.category}</h6>
               </div>
             </div>
           </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
           <div className="col-lg-11">
             <div className="row">
               <div className="col-lg-5">
-                <h4 className="mb-50">01 . The Challenge</h4>
+                <h4 className="mb-50">The Challenge</h4>
               </div>
               <div className="col-lg-7">
                 <div className="text">
                   <h5 className="mb-30 fw-400 line-height-40">
-                    The goal is there are many variations of passages of Lorem
-                    Ipsum available, but the majority have suffered alteration
-                    in some form, by injected humour, or randomised words which
-                    don&lsquo;t look even slightly believable.
+                    {project.content.overview}
                   </h5>
                   <p className="fz-18">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which
-                    don&lsquo;t look even slightly believable. If you are going
-                    to use a passage of Lorem Ipsum, you need to be sure there
-                    isn&lsquo;t anything embarrassing hidden in the middle of
-                    text.
+                  {project.content.challenge}<br/>
+                  {/* <b>{project.content.rightsReserved}</b> */}
                   </p>
                 </div>
               </div>

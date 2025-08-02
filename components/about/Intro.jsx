@@ -11,7 +11,7 @@ function Intro() {
                 <div className="col-6">
                   <img src="/assets/imgs/intro/i1.jpg" alt="" />
                   <div className="img-icon">
-                    <img src="/assets/imgs/arw0.png" alt="" />
+                    <img src="/assets/imgs/logo_outline.png" alt="" />
                   </div>
                 </div>
                 <div className="col-6 mt-40">

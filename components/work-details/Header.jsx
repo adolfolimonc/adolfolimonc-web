@@ -28,7 +28,7 @@ function Header({ project }) {
         <div className="row">
           <div className="col-12">
             <div className="caption">
-              <h1>{project.title || 'Project Title'}</h1>
+              <h1>{project.title || 'Project Title'} • {project.subTitle || 'Subtitle'}</h1>
             </div>
           </div>
         </div>

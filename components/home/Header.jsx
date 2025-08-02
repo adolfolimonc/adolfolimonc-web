@@ -116,7 +116,7 @@ function Header() {
                       data-background={item.thumbnail}
                       data-overlay-dark="3"
                     >
-                      <a href={`/work/${item.slug}`}></a>
+                      {/* <a href={`/work/${item.slug}`}></a> */}
                     </div>
                   </SwiperSlide>
                 ))}
