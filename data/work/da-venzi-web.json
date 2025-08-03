@@ -1,20 +1,32 @@
 {
   "id": "da-venzi-web",
   "title": "Da Venzi",
-  "subtitle": "Web Development",
+  "subTitle": "Web Development",
+  "client": "Da Venzi",
+  "time": "3 Weeks",
+  "services": "Brand Identity",
   "thumbnail": "/assets/imgs/works/2/1.jpg",
   "category": "Digital",
   "tags": ["web-development", "web-design"],
-  "client": "Da Venzi",
   "year": "2025",
   "featured": true,
   "slug": "da-venzi-web",
+  "gifImages": [
+    "/assets/imgs/works/da-venzi/01.gif",
+    "/assets/imgs/works/da-venzi/02.gif",
+    "/assets/imgs/works/da-venzi/03.gif"
+  ],
   "content": {
+    "rightsReserved": "2025® — All rights reserved",
     "overview": "Da Venzi",
+
+    "challenge": "CEO Rising®, a New York-based online business accelerator, partnered with me to revolutionise its brand under the guidance of Lena West, a visionary business strategist. The process started with discovery sessions where Lena shed light on CEO Rising® relevant insights about the company, its competitors and its brand identity.",
+
+    "solution": "Lena had strong conviction towards how businesses are done. There's inconformity and a constant challenge to the status quo from her side. The brand identity should reflect that. Typical businesses accelerators have a typical brand identity. The goal is that if they zig, we're going to zag. Through very profound insights discovered in three discovery sessions, along with my Design Thinking oriented process, we smoothly agreed on a brand that is constantly challeging the status quo in all its touchpoints.",
+
     "images": [
       { "url": "/assets/imgs/works/2/1.jpg", "caption": "Logo variations" },
       { "url": "/assets/imgs/works/2/2.jpg", "caption": "Brand guidelines" }
-    ],
-    "details": "Details here!"
+    ]
   }
 } 
