@@ -53,6 +53,7 @@ function Clients() {
             id="content-carousel-container-unq-clients"
             className="swiper-container"
             data-swiper="container"
+            spaceBetween={100}
           >
             {clients.map((client, idx) => (
               <SwiperSlide key={idx}>
