@@ -21,7 +21,7 @@ function Header({ project }) {
   return (
     <div
       className="header header-project bg-img d-flex align-items-end"
-      data-background="/assets/imgs/works/3/1.jpg"
+      data-background={project.thumbnail}
       data-overlay-dark="9"
     >
       <div className="container">

@@ -5,9 +5,12 @@ import React, { useState, useEffect } from 'react';
 function Works({ project }) {
   const [imageLoaded1, setImageLoaded1] = useState(false);
   const [imageError1, setImageError1] = useState(false);
+  const [videoLoaded1, setVideoLoaded1] = useState(false);
+  const [videoError1, setVideoError1] = useState(false);
 
-  // Get image paths from project data - you can customize these property names
+  // Get image/video path from project data
   const image1Path = project?.gifImages[1];
+  const isVideo1 = image1Path && image1Path.toLowerCase().endsWith('.mp4');
 
   const handleImage1Load = () => {
     setImageLoaded1(true);
@@ -17,6 +20,16 @@ function Works({ project }) {
   const handleImage1Error = () => {
     setImageError1(true);
     setImageLoaded1(false);
+  };
+
+  const handleVideo1Load = () => {
+    setVideoLoaded1(true);
+    setVideoError1(false);
+  };
+
+  const handleVideo1Error = () => {
+    setVideoError1(true);
+    setVideoLoaded1(false);
   };
 
   // Initialize WOW.js for animations
@@ -32,19 +45,38 @@ function Works({ project }) {
         <div className="">
           <div className="container">
             <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
-              {!imageError1 ? (
-                <img 
-                  src={image1Path} 
-                  alt={`${project?.title || "Project"} work image 1`}
-                  onLoad={handleImage1Load}
-                  onError={handleImage1Error}
-                  style={{ 
-                    opacity: imageLoaded1 ? 1 : 0.7,
-                    transition: 'opacity 0.3s ease',
-                    width: '100%',
-                    height: 'auto'
-                  }}
-                />
+              {!imageError1 && !videoError1 && image1Path ? (
+                isVideo1 ? (
+                  <video
+                    src={image1Path}
+                    onLoadedData={handleVideo1Load}
+                    onError={handleVideo1Error}
+                    style={{
+                      opacity: videoLoaded1 ? 1 : 0.7,
+                      transition: 'opacity 0.3s ease',
+                      width: '100%',
+                      height: 'auto'
+                    }}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                  />
+                ) : (
+                  <img
+                    src={image1Path}
+                    alt={`${project?.title || "Project"} work image 1`}
+                    onLoad={handleImage1Load}
+                    onError={handleImage1Error}
+                    style={{
+                      opacity: imageLoaded1 ? 1 : 0.7,
+                      transition: 'opacity 0.3s ease',
+                      width: '100%',
+                      height: 'auto'
+                    }}
+                  />
+                )
               ) : (
                 <div className="error-placeholder" style={{
                   padding: '40px',
@@ -56,7 +88,7 @@ function Works({ project }) {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <p>Image could not be loaded</p>
+                  <p>Media could not be loaded</p>
                 </div>
               )}
             </div>

@@ -5,9 +5,14 @@ import React, { useState, useEffect } from 'react';
 function Challenge({ project }) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
-  // Get the single GIF path from project data
-  const gifPath = project.gifImages[0];
+  // Get the single media path from project data
+  const mediaPath = project.gifImages[0];
+
+  // Check if the file is a video (MP4)
+  const isVideo = mediaPath && mediaPath.toLowerCase().endsWith('.mp4');
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -17,6 +22,16 @@ function Challenge({ project }) {
   const handleImageError = () => {
     setImageError(true);
     setImageLoaded(false);
+  };
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+    setVideoError(false);
+  };
+
+  const handleVideoError = () => {
+    setVideoError(true);
+    setVideoLoaded(false);
   };
 
   // Initialize WOW.js for animations
@@ -33,19 +48,38 @@ function Challenge({ project }) {
           <div className="container">
           <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
 
-              {!imageError && gifPath ? (
-                <img 
-                  src={gifPath} 
-                  alt={`${project?.title || "Project"} GIF`} 
-                  onLoad={handleImageLoad}
-                  onError={handleImageError}
-                  style={{ 
-                    opacity: imageLoaded ? 1 : 0.7,
-                    transition: 'opacity 0.3s ease',
-                    width: '100%',
-                    height: 'auto'
-                  }}
-                />
+              {!imageError && !videoError && mediaPath ? (
+                isVideo ? (
+                  <video 
+                    src={mediaPath} 
+                    onLoadedData={handleVideoLoad}
+                    onError={handleVideoError}
+                    style={{ 
+                      opacity: videoLoaded ? 1 : 0.7,
+                      transition: 'opacity 0.3s ease',
+                      width: '100%',
+                      height: 'auto'
+                    }}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                  />
+                ) : (
+                  <img 
+                    src={mediaPath} 
+                    alt={`${project?.title || "Project"} GIF`} 
+                    onLoad={handleImageLoad}
+                    onError={handleImageError}
+                    style={{ 
+                      opacity: imageLoaded ? 1 : 0.7,
+                      transition: 'opacity 0.3s ease',
+                      width: '100%',
+                      height: 'auto'
+                    }}
+                  />
+                )
               ) : (
                 <div className="error-placeholder wow fadeInUp" data-wow-delay=".1s" style={{
                   padding: '40px',
@@ -53,7 +87,7 @@ function Challenge({ project }) {
                   backgroundColor: '#f5f5f5',
                   borderRadius: '8px'
                 }}>
-                  <p>GIF image could not be loaded</p>
+                  <p>Media file could not be loaded</p>
                 </div>
               )}
             </div>
