@@ -4,29 +4,33 @@
   "subTitle": "Web Development",
   "client": "Da Venzi",
   "time": "3 Weeks",
-  "services": "Brand Identity",
-  "thumbnail": "/assets/imgs/works/2/1.jpg",
+  "services": "Web Design/Development",
+  "thumbnail": "/assets/imgs/works/da-venzi/thumbnail.png",
   "category": "Digital",
   "tags": ["web-development", "web-design"],
   "year": "2025",
   "featured": true,
   "slug": "da-venzi-web",
   "gifImages": [
-    "/assets/imgs/works/da-venzi/01.gif",
-    "/assets/imgs/works/da-venzi/02.gif",
-    "/assets/imgs/works/da-venzi/03.gif"
+    "/assets/imgs/works/da-venzi/01.mp4",
+    "/assets/imgs/works/da-venzi/04.png",
+    "/assets/imgs/works/da-venzi/03.png"
+  ],
+  "gifImagesLinks": [
+    null,
+    "https://adolfolimonc.github.io/da-venzi-website/",
+    null
   ],
   "content": {
     "rightsReserved": "2025® — All rights reserved",
-    "overview": "Da Venzi",
+    "overview": "da Venzi is an authentic Italian restaurant based in Mazatlán, Sinaloa, founded by Chef Eddj — a passionate Italian cook with over 30 years of experience in traditional Italian cuisine.",
 
-    "challenge": "CEO Rising®, a New York-based online business accelerator, partnered with me to revolutionise its brand under the guidance of Lena West, a visionary business strategist. The process started with discovery sessions where Lena shed light on CEO Rising® relevant insights about the company, its competitors and its brand identity.",
+    "challenge": "The main challenge was to capture the soul of da Venzi and translate it into a digital experience. The website needed to reflect the warmth of the restaurant, the genuine personality of Chef Eddj, and the nostalgic charm of homemade Italian food. From the language to the visuals, every element had to evoke a sense of place and belonging — like being invited into the chef's home.",
 
-    "solution": "Lena had strong conviction towards how businesses are done. There's inconformity and a constant challenge to the status quo from her side. The brand identity should reflect that. Typical businesses accelerators have a typical brand identity. The goal is that if they zig, we're going to zag. Through very profound insights discovered in three discovery sessions, along with my Design Thinking oriented process, we smoothly agreed on a brand that is constantly challeging the status quo in all its touchpoints.",
+    "solution": "We designed a website that feels like stepping into da Venzi — warm colors, hand-crafted textures, and subtle Italian expressions sprinkled throughout the copy. The content is centered around storytelling, highlighting the chef's heritage, the authenticity of the menu, and the unique energy of the space. We emphasized a mobile-friendly layout with clear service sections (menu, delivery, events) and integrated seamless communication tools for reservations and delivery. The result is a digital space that's as personal, delicious, and heartfelt as the restaurant itself",
 
     "images": [
-      { "url": "/assets/imgs/works/2/1.jpg", "caption": "Logo variations" },
-      { "url": "/assets/imgs/works/2/2.jpg", "caption": "Brand guidelines" }
+      { "url": "/assets/imgs/works/da-venzi/04.png", "caption": "Logo variations" }
     ]
   }
 } 

@@ -8,8 +8,9 @@ function Challenge({ project }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
 
-  // Get the single media path from project data
+  // Get the single media path and link from project data
   const mediaPath = project.gifImages[0];
+  const mediaLink = project?.gifImagesLinks?.[0]; // New optional link field
 
   // Check if the file is a video (MP4)
   const isVideo = mediaPath && mediaPath.toLowerCase().endsWith('.mp4');
@@ -41,55 +42,77 @@ function Challenge({ project }) {
     }
   }, []);
 
+  // Function to render media content (image or video) with optional link
+  const renderMedia = () => {
+    if (!imageError && !videoError && mediaPath) {
+      const mediaContent = isVideo ? (
+        <video 
+          src={mediaPath} 
+          onLoadedData={handleVideoLoad}
+          onError={handleVideoError}
+          style={{ 
+            opacity: videoLoaded ? 1 : 0.7,
+            transition: 'opacity 0.3s ease',
+            width: '100%',
+            height: 'auto'
+          }}
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+        />
+      ) : (
+        <img 
+          src={mediaPath} 
+          alt={`${project?.title || "Project"} GIF`} 
+          onLoad={handleImageLoad}
+          onError={handleImageError}
+          style={{ 
+            opacity: imageLoaded ? 1 : 0.7,
+            transition: 'opacity 0.3s ease',
+            width: '100%',
+            height: 'auto'
+          }}
+        />
+      );
+
+      // If there's a link, wrap the media in an anchor tag
+      if (mediaLink) {
+        return (
+          <a 
+            href={mediaLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ display: 'block', textDecoration: 'none' }}
+          >
+            {mediaContent}
+          </a>
+        );
+      }
+
+      return mediaContent;
+    }
+
+    return (
+      <div className="error-placeholder wow fadeInUp" data-wow-delay=".1s" style={{
+        padding: '40px',
+        textAlign: 'center',
+        backgroundColor: '#f5f5f5',
+        borderRadius: '8px'
+      }}>
+        <p>Media file could not be loaded</p>
+      </div>
+    );
+  };
+
   return (
     <section className="section-padding">
       <div className="container">
         <div className="section-padding pt-0">
           <div className="container">
           <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
-
-              {!imageError && !videoError && mediaPath ? (
-                isVideo ? (
-                  <video 
-                    src={mediaPath} 
-                    onLoadedData={handleVideoLoad}
-                    onError={handleVideoError}
-                    style={{ 
-                      opacity: videoLoaded ? 1 : 0.7,
-                      transition: 'opacity 0.3s ease',
-                      width: '100%',
-                      height: 'auto'
-                    }}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls={false}
-                  />
-                ) : (
-                  <img 
-                    src={mediaPath} 
-                    alt={`${project?.title || "Project"} GIF`} 
-                    onLoad={handleImageLoad}
-                    onError={handleImageError}
-                    style={{ 
-                      opacity: imageLoaded ? 1 : 0.7,
-                      transition: 'opacity 0.3s ease',
-                      width: '100%',
-                      height: 'auto'
-                    }}
-                  />
-                )
-              ) : (
-                <div className="error-placeholder wow fadeInUp" data-wow-delay=".1s" style={{
-                  padding: '40px',
-                  textAlign: 'center',
-                  backgroundColor: '#f5f5f5',
-                  borderRadius: '8px'
-                }}>
-                  <p>Media file could not be loaded</p>
-                </div>
-              )}
+              {renderMedia()}
             </div>
           </div>
         </div>

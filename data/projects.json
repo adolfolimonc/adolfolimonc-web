@@ -23,48 +23,25 @@
     "selected": true,
     "header": false
   },
-  {
-    "id": "clinica-san-martin-brand-identity",
-    "title": "Clínica San Martín",
-    "subTitle": "Brand Identity",
-    "thumbnail": "/assets/imgs/works/2/03.png",
-    "thumbnail_home": "/assets/imgs/works/1/03.png",
-    "category": "Branding",
-    "tags": ["branding", "logo-design"],
-    "slug": "clinica-san-martin-brand-identity",
-    "selected": false,
-    "header": false
-  },
+
   {
     "id": "irco-content-marketing",
     "title": "IRCO",
     "subTitle": "Content Marketing",
-    "thumbnail": "/assets/imgs/works/2/03.png",
-    "thumbnail_home": "/assets/imgs/works/1/03.png",
+    "thumbnail": "/assets/imgs/works/irco/thumbnail.png",
+    "thumbnail_home": "/assets/imgs/works/irco/thumbnail.png",
     "category": "Design",
     "tags": ["social-media", "content-marketing"],
     "slug": "irco-content-marketing",
-    "selected": false,
-    "header": false
-  }, 
-    {
-    "id": "dolce-mami-content-marketing",
-    "title": "Dolce Mami",
-    "subTitle": "Content Marketing",
-    "thumbnail": "/assets/imgs/works/2/03.png",
-    "thumbnail_home": "/assets/imgs/works/1/03.png",
-    "category": "Design",
-    "tags": ["social-media", "content-marketing"],
-    "slug": "dolce-mami-content-marketing",
     "selected": true,
     "header": true
-  },
+  }, 
 
   {
     "id": "da-venzi-web",
     "title": "Da Venzi",
     "subTitle": "Website",
-    "thumbnail": "/assets/imgs/works/2/03.png",
+    "thumbnail": "/assets/imgs/works/da-venzi/thumbnail.png",
     "thumbnail_home": "/assets/imgs/works/1/03.png",
     "category": "Digital",
     "tags": ["web-design", "web-development"],

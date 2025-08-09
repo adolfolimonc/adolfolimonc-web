@@ -11,8 +11,9 @@ function Works2({ project }) {
   const [imageStates, setImageStates] = useState({});
   const [videoStates, setVideoStates] = useState({});
 
-  // Get image paths from project data - you can customize these property names
+  // Get image paths and links from project data - you can customize these property names
   const image1Path = project?.gifImages[2];
+  const image1Link = project?.gifImagesLinks?.[2]; // New optional link field
   const isVideo1 = image1Path && image1Path.toLowerCase().endsWith('.mp4');
   const projectImages = project?.content?.images || [];
 
@@ -87,42 +88,75 @@ function Works2({ project }) {
     }
   }, []);
 
+  // Function to render media content (image or video) with optional link
+  const renderMedia = (mediaPath, mediaLink, isVideo, onLoad, onError, altText, style = {}) => {
+    if (!mediaPath) return null;
+
+    const mediaContent = isVideo ? (
+      <video
+        src={mediaPath}
+        onLoadedData={onLoad}
+        onError={onError}
+        style={{
+          opacity: 1,
+          transition: 'opacity 0.3s ease',
+          width: '100%',
+          height: 'auto',
+          ...style
+        }}
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls={false}
+      />
+    ) : (
+      <img
+        src={mediaPath}
+        alt={altText}
+        onLoad={onLoad}
+        onError={onError}
+        style={{
+          opacity: 1,
+          transition: 'opacity 0.3s ease',
+          width: '100%',
+          height: 'auto',
+          ...style
+        }}
+      />
+    );
+
+    // If there's a link, wrap the media in an anchor tag
+    if (mediaLink) {
+      return (
+        <a 
+          href={mediaLink} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ display: 'block', textDecoration: 'none' }}
+        >
+          {mediaContent}
+        </a>
+      );
+    }
+
+    return mediaContent;
+  };
+
   return (
     <div className="section-padding pt-0 pb-0" style={{ marginBottom: '80px' }}>
           <div className="container">
             {/* Original single image or video */}
-            <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
+            <div className="img md-mb10 wow fadeInUp" data-wow-delay=".1s">
               {!imageError1 && !videoError1 && image1Path ? (
-                isVideo1 ? (
-                  <video
-                    src={image1Path}
-                    onLoadedData={handleVideo1Load}
-                    onError={handleVideo1Error}
-                    style={{
-                      opacity: videoLoaded1 ? 1 : 1,
-                      transition: 'opacity 0.3s ease',
-                      width: '100%',
-                      height: 'auto'
-                    }}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls={false}
-                  />
-                ) : (
-                  <img
-                    src={image1Path}
-                    alt={`${project?.title || "Project"} work image 1`}
-                    onLoad={handleImage1Load}
-                    onError={handleImage1Error}
-                    style={{
-                      opacity: imageLoaded1 ? 1 : 1,
-                      transition: 'opacity 0.3s ease',
-                      width: '100%',
-                      height: 'auto'
-                    }}
-                  />
+                renderMedia(
+                  image1Path,
+                  image1Link,
+                  isVideo1,
+                  isVideo1 ? handleVideo1Load : handleImage1Load,
+                  isVideo1 ? handleVideo1Error : handleImage1Error,
+                  `${project?.title || "Project"} work image 1`,
+                  { marginBottom: '10px' }
                 )
               ) : (
                 <div className="error-placeholder" style={{
@@ -144,29 +178,21 @@ function Works2({ project }) {
               <div className=''>
                 {projectImages.map((image, index) => {
                   const isVid = image.url && image.url.toLowerCase().endsWith('.mp4');
+                  const imageLink = image.link; // Check if individual images have links
                   return (
                     <div key={index} className="section-padding pt-0 pb-0">
                       <div className="img md-mb30 wow fadeInUp" data-wow-delay={`${0.2 + (index * 0.1)}s`}>
                         {isVid ? (
                           !videoStates[index]?.error ? (
                             <div className="collection-image-wrapper">
-                              <video
-                                src={image.url}
-                                alt={image.caption || `${project?.title || "Project"} video ${index + 1}`}
-                                onLoadedData={() => handleCollectionVideoLoad(index)}
-                                onError={() => handleCollectionVideoError(index)}
-                                style={{
-                                  opacity: videoStates[index]?.loaded ? 1 : 1,
-                                  transition: 'opacity 0.3s ease',
-                                  width: '100%',
-                                  height: 'auto'
-                                }}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                controls={false}
-                              />
+                              {renderMedia(
+                                image.url,
+                                imageLink,
+                                true,
+                                () => handleCollectionVideoLoad(index),
+                                () => handleCollectionVideoError(index),
+                                image.caption || `${project?.title || "Project"} video ${index + 1}`
+                              )}
                               {image.caption && (
                                 <div className="image-caption" style={{
                                   marginTop: '10px',
@@ -195,18 +221,14 @@ function Works2({ project }) {
                         ) : (
                           !imageStates[index]?.error ? (
                             <div className="collection-image-wrapper">
-                              <img
-                                src={image.url}
-                                alt={image.caption || `${project?.title || "Project"} image ${index + 1}`}
-                                onLoad={() => handleCollectionImageLoad(index)}
-                                onError={() => handleCollectionImageError(index)}
-                                style={{
-                                  opacity: imageStates[index]?.loaded ? 1 : 1,
-                                  transition: 'opacity 0.3s ease',
-                                  width: '100%',
-                                  height: 'auto'
-                                }}
-                              />
+                              {renderMedia(
+                                image.url,
+                                imageLink,
+                                false,
+                                () => handleCollectionImageLoad(index),
+                                () => handleCollectionImageError(index),
+                                image.caption || `${project?.title || "Project"} image ${index + 1}`
+                              )}
                               {image.caption && (
                                 <div className="image-caption" style={{
                                   marginTop: '10px',

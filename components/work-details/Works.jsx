@@ -8,8 +8,9 @@ function Works({ project }) {
   const [videoLoaded1, setVideoLoaded1] = useState(false);
   const [videoError1, setVideoError1] = useState(false);
 
-  // Get image/video path from project data
+  // Get image/video path and link from project data
   const image1Path = project?.gifImages[1];
+  const image1Link = project?.gifImagesLinks?.[1]; // New optional link field
   const isVideo1 = image1Path && image1Path.toLowerCase().endsWith('.mp4');
 
   const handleImage1Load = () => {
@@ -39,58 +40,81 @@ function Works({ project }) {
     }
   }, []);
 
+  // Function to render media content (image or video)
+  const renderMedia = () => {
+    if (!imageError1 && !videoError1 && image1Path) {
+      const mediaContent = isVideo1 ? (
+        <video
+          src={image1Path}
+          onLoadedData={handleVideo1Load}
+          onError={handleVideo1Error}
+          style={{
+            opacity: videoLoaded1 ? 1 : 0.7,
+            transition: 'opacity 0.3s ease',
+            width: '100%',
+            height: 'auto'
+          }}
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+        />
+      ) : (
+        <img
+          src={image1Path}
+          alt={`${project?.title || "Project"} work image 1`}
+          onLoad={handleImage1Load}
+          onError={handleImage1Error}
+          style={{
+            opacity: imageLoaded1 ? 1 : 0.7,
+            transition: 'opacity 0.3s ease',
+            width: '100%',
+            height: 'auto'
+          }}
+        />
+      );
+
+      // If there's a link, wrap the media in an anchor tag
+      if (image1Link) {
+        return (
+          <a 
+            href={image1Link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ display: 'block', textDecoration: 'none' }}
+          >
+            {mediaContent}
+          </a>
+        );
+      }
+
+      return mediaContent;
+    }
+
+    return (
+      <div className="error-placeholder" style={{
+        padding: '40px',
+        textAlign: 'center',
+        backgroundColor: '#f5f5f5',
+        borderRadius: '8px',
+        minHeight: '200px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <p>Media could not be loaded</p>
+      </div>
+    );
+  };
+
   return (
     <div className="">
       <div className="container">
         <div className="">
           <div className="container">
             <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
-              {!imageError1 && !videoError1 && image1Path ? (
-                isVideo1 ? (
-                  <video
-                    src={image1Path}
-                    onLoadedData={handleVideo1Load}
-                    onError={handleVideo1Error}
-                    style={{
-                      opacity: videoLoaded1 ? 1 : 0.7,
-                      transition: 'opacity 0.3s ease',
-                      width: '100%',
-                      height: 'auto'
-                    }}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls={false}
-                  />
-                ) : (
-                  <img
-                    src={image1Path}
-                    alt={`${project?.title || "Project"} work image 1`}
-                    onLoad={handleImage1Load}
-                    onError={handleImage1Error}
-                    style={{
-                      opacity: imageLoaded1 ? 1 : 0.7,
-                      transition: 'opacity 0.3s ease',
-                      width: '100%',
-                      height: 'auto'
-                    }}
-                  />
-                )
-              ) : (
-                <div className="error-placeholder" style={{
-                  padding: '40px',
-                  textAlign: 'center',
-                  backgroundColor: '#f5f5f5',
-                  borderRadius: '8px',
-                  minHeight: '200px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <p>Media could not be loaded</p>
-                </div>
-              )}
+              {renderMedia()}
             </div>
           </div>
         </div>

@@ -3,30 +3,37 @@
   "title": "IRCO",
   "subTitle": "Content Marketing",
   "client": "IRCO",
-  "time": "3 Weeks",
-  "services": "Brand Identity",
-  "thumbnail": "/assets/imgs/works/2/1.jpg",
+  "time": "1 Week",
+  "services": "Content Marketing",
+  "thumbnail": "/assets/imgs/works/irco/thumbnail.png",
   "category": "Design",
   "tags": ["content-marketing", "social-media", "marketing"],
   "year": "2023",
   "featured": true,
   "slug": "irco-content-marketing",
   "gifImages": [
-    "/assets/imgs/works/irco/01.gif",
-    "/assets/imgs/works/irco/02.gif",
-    "/assets/imgs/works/irco/03.gif"
+    "/assets/imgs/works/irco/01.png",
+    "/assets/imgs/works/irco/02.png",
+    "/assets/imgs/works/irco/03.png"
+  ],
+  "gifImagesLinks": [
+    null,
+    null,
+    null
   ],
   "content": {
     "rightsReserved": "2025® — All rights reserved",
-    "overview": "IRCO",
+    "overview": "Irco has delivered post-harvest solutions for over 20 years, specializing in the nationwide distribution of spare parts, packing materials, and hardware. Its products support key industries such as agribusiness, aquaculture, livestock, food processing, and manufacturing.",
 
-    "challenge": "CEO Rising®, a New York-based online business accelerator, partnered with me to revolutionise its brand under the guidance of Lena West, a visionary business strategist. The process started with discovery sessions where Lena shed light on CEO Rising® relevant insights about the company, its competitors and its brand identity.",
+    "challenge": "The main challenge was to define a cohesive visual identity that aligned with Irco Comercial's established look and feel. The objective was to create a content style that felt modern and clean while remaining instantly recognizable across all social media platforms. This required developing a visual strategy that balanced brand consistency with versatility across product categories.",
 
-    "solution": "Lena had strong conviction towards how businesses are done. There's inconformity and a constant challenge to the status quo from her side. The brand identity should reflect that. Typical businesses accelerators have a typical brand identity. The goal is that if they zig, we're going to zag. Through very profound insights discovered in three discovery sessions, along with my Design Thinking oriented process, we smoothly agreed on a brand that is constantly challeging the status quo in all its touchpoints.",
+    "solution": "The solution was to craft a modern, clean visual identity rooted in Irco's existing brand colors and industrial tone. Key design elements—such as bold typography, structured layouts, and product-focused imagery—were used to ensure clarity and consistency. Each piece was designed to feel uniquely Irco, enhancing recognition while remaining adaptable to different content types and product lines.",
 
     "images": [
-      { "url": "/assets/imgs/works/2/1.jpg", "caption": "Logo variations" },
-      { "url": "/assets/imgs/works/2/2.jpg", "caption": "Brand guidelines" }
+      { "url": "/assets/imgs/works/irco/04.png", "caption": "Logo variations" },
+      { "url": "/assets/imgs/works/irco/05.png", "caption": "Brand guidelines" },
+      { "url": "/assets/imgs/works/irco/06.png", "caption": "Brand guidelines" },
+      { "url": "/assets/imgs/works/irco/07.png", "caption": "Brand guidelines" }
     ]
   }
 } 
