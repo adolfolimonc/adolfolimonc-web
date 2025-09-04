@@ -35,7 +35,7 @@
     "slug": "irco-content-marketing",
     "selected": true,
     "header": true
-  }, 
+  },
 
   {
     "id": "da-venzi-web",
@@ -48,5 +48,18 @@
     "slug": "da-venzi-web",
     "selected": true,
     "header": true
+  },
+
+  {
+    "id": "the-inn-at-mazatlan-video",
+    "title": "The Inn at Mazatlan 45th Anniversary",
+    "subTitle": "Video Production",
+    "thumbnail": "/assets/imgs/works/the-inn-at-mazatlan/thumbnail.png",
+    "thumbnail_home": "/assets/imgs/works/the-inn-at-mazatlan/thumbnail.png",
+    "category": "Design",
+    "tags": ["video", "content-marketing"],
+    "slug": "the-inn-at-mazatlan-video",
+    "selected": true,
+    "header": true
   }
-] 
+]

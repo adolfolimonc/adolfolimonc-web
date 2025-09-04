@@ -1,0 +1,34 @@
+{
+  "id": "the-inn-at-mazatlan-video",
+  "title": "The Inn at Mazatlan 45th Anniversary",
+  "subTitle": "Video",
+  "client": "The Inn at Mazatlan",
+  "time": "1 Week",
+  "services": "Content Marketing",
+  "thumbnail": "/assets/imgs/works/the-inn-at-mazatlan/thumbnail.png",
+  "category": "Video",
+  "tags": ["video", "content-marketing"],
+  "year": "2024",
+  "featured": true,
+  "slug": "the-inn-at-mazatlan-video",
+  "gifImages": [
+    "/assets/imgs/works/the-inn-at-mazatlan/01.mp4",
+    "/assets/imgs/works/the-inn-at-mazatlan/02.png",
+    "https://player.vimeo.com/video/1115682743?h=bcaa7c4f43"
+  ],
+  "gifImagesLinks": [null, null, null],
+  "content": {
+    "rightsReserved": "2025® — All rights reserved",
+    "overview": "For its 45th anniversary, The Inn at Mazatlán wanted to celebrate with more than a simple post. I designed a commemorative visual identity that honored their brand colors while standing apart, and proposed a storytelling video spotlighting the hotel’s rich history and legacy.",
+
+    "challenge": "The biggest obstacle? A shortage of usable content. With limited footage and only one promo video from an external agency, the challenge was to craft a narrative that felt engaging, complete, and celebratory. The theme had to be strong enough to carry the story with concise yet meaningful context for viewers.",
+
+    "solution": "I recorded new drone footage to fill the gaps and dove deep into their social media archives, salvaging old images to reimagine them with AI tools like Runway. The final concept took shape as a dynamic timeline—showcasing the hotel’s evolution, its place in Mazatlán’s history, and the impact it continues to have today. The result was a compelling story that celebrated the past while positioning the brand for the future.",
+
+    "images": [
+      {
+        "url": ""
+      }
+    ]
+  }
+}

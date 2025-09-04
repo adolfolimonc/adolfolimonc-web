@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/contact/route": "/api/contact",
+  "/api/project/[slug]/route": "/api/project/[slug]",
+  "/favicon.ico/route": "/favicon.ico",
+  "/project/[slug]/page": "/project/[slug]",
+  "/about/page": "/about",
+  "/blog-details/page": "/blog-details",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
+  "/capabilities/page": "/capabilities",
+  "/capabilities-details/page": "/capabilities-details",
+  "/faqs/page": "/faqs",
+  "/page": "/",
+  "/team-details/page": "/team-details",
+  "/page-404/page": "/page-404",
+  "/team/page": "/team",
+  "/work/page": "/work",
+  "/work/[slug]/page": "/work/[slug]"
+}
