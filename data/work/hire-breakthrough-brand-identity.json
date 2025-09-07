@@ -16,11 +16,7 @@
     "/assets/imgs/works/hire-breakthrough/02.mp4",
     "/assets/imgs/works/hire-breakthrough/03.mp4"
   ],
-  "gifImagesLinks": [
-    null,
-    null,
-    null
-  ],
+  "gifImagesLinks": [null, null, null],
   "content": {
     "rightsReserved": "2025® — All rights reserved",
     "overview": "Kimone Napier is a powerhouse in HR strategy, bringing deep expertise in operations and systems engineering. Together, we reimagined her brand as Hire Breakthrough—a bold shift into the B2B space. Her mission? To help big businesses tackle big challenges like the Great Resignation, with strategic HR that actually works.",
@@ -30,18 +26,30 @@
     "solution": "The result? A bold, flexible identity that captured the spirit of Hire Breakthrough. Kimone rolled it out seamlessly across all touchpoints—website, socials, and brand assets. Today, Hire Breakthrough stands as a trusted HR partner to clients around the globe.",
 
     "images": [
-      { "url": "/assets/imgs/works/hire-breakthrough/04.mp4", "caption": "Color palette" },
-      { "url": "/assets/imgs/works/hire-breakthrough/05.png", "caption": "Typography" },
-      { "url": "/assets/imgs/works/hire-breakthrough/06.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/07.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/08.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/09.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/10.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/11.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/12.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/13.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/14.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/hire-breakthrough/15.png", "caption": "Logo" }
+      { "url": "/assets/imgs/works/hire-breakthrough/04.mp4", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/05.png", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/06.png", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/07.png", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/08.png", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/09.png", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/10.png", "caption": " " },
+      { "url": "/assets/imgs/works/hire-breakthrough/11.png", "caption": " " },
+      {
+        "url": "/assets/imgs/works/hire-breakthrough/12.png",
+        "caption": " "
+      },
+      {
+        "url": "/assets/imgs/works/hire-breakthrough/13.png",
+        "caption": " "
+      },
+      {
+        "url": "/assets/imgs/works/hire-breakthrough/14.png",
+        "caption": " "
+      },
+      {
+        "url": "/assets/imgs/works/hire-breakthrough/15.png",
+        "caption": " "
+      }
     ]
   }
-} 
+}

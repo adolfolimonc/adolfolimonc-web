@@ -16,11 +16,7 @@
     "/assets/imgs/works/irco/02.png",
     "/assets/imgs/works/irco/03.png"
   ],
-  "gifImagesLinks": [
-    null,
-    null,
-    null
-  ],
+  "gifImagesLinks": [null, null, null],
   "content": {
     "rightsReserved": "2025® — All rights reserved",
     "overview": "Irco has delivered post-harvest solutions for over 20 years, specializing in the nationwide distribution of spare parts, packing materials, and hardware. Its products support key industries such as agribusiness, aquaculture, livestock, food processing, and manufacturing.",
@@ -30,10 +26,10 @@
     "solution": "The solution was to craft a modern, clean visual identity rooted in Irco's existing brand colors and industrial tone. Key design elements—such as bold typography, structured layouts, and product-focused imagery—were used to ensure clarity and consistency. Each piece was designed to feel uniquely Irco, enhancing recognition while remaining adaptable to different content types and product lines.",
 
     "images": [
-      { "url": "/assets/imgs/works/irco/04.png", "caption": "Logo variations" },
-      { "url": "/assets/imgs/works/irco/05.png", "caption": "Brand guidelines" },
-      { "url": "/assets/imgs/works/irco/06.png", "caption": "Brand guidelines" },
-      { "url": "/assets/imgs/works/irco/07.png", "caption": "Brand guidelines" }
+      { "url": "/assets/imgs/works/irco/04.png", "caption": " " },
+      { "url": "/assets/imgs/works/irco/05.png", "caption": " " },
+      { "url": "/assets/imgs/works/irco/06.png", "caption": " " },
+      { "url": "/assets/imgs/works/irco/07.png", "caption": " " }
     ]
   }
-} 
+}

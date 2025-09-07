@@ -16,11 +16,7 @@
     "/assets/imgs/works/ceo-rising/02.gif",
     "/assets/imgs/works/ceo-rising/03.gif"
   ],
-  "gifImagesLinks": [
-    null,
-    null,
-    null
-  ],
+  "gifImagesLinks": [null, null, null],
   "content": {
     "rightsReserved": "2025® — All rights reserved",
     "overview": "Lena set out to smash the traditional CEO mold. This brand identity was designed to empower rebels—no matter their race or gender—to rise, lead, and rewrite the rules.",
@@ -30,18 +26,18 @@
     "solution": "Lena doesn't follow trends—she questions them. And the brand had to do the same. While most accelerators play it safe, we designed a visual language that zags where others zig. After three high-impact discovery sessions and a strategy rooted in Design Thinking, we landed on a brand that challenges convention at every touchpoint—loudly and proudly.",
 
     "images": [
-      { "url": "/assets/imgs/works/ceo-rising/04.png", "caption": "Color palette" },
-      { "url": "/assets/imgs/works/ceo-rising/05.png", "caption": "Typography" },
-      { "url": "/assets/imgs/works/ceo-rising/06.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/07.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/08.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/09.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/10.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/11.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/12.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/13.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/14.png", "caption": "Logo" },
-      { "url": "/assets/imgs/works/ceo-rising/15.png", "caption": "Logo" }
+      { "url": "/assets/imgs/works/ceo-rising/04.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/05.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/06.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/07.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/08.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/09.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/10.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/11.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/12.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/13.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/14.png", "caption": " " },
+      { "url": "/assets/imgs/works/ceo-rising/15.png", "caption": " " }
     ]
   }
-} 
+}
