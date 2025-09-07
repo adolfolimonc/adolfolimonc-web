@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 function Works2({ project }) {
   const [imageLoaded1, setImageLoaded1] = useState(false);
@@ -209,7 +210,7 @@ function Works2({ project }) {
       );
     } else {
       mediaContent = (
-        <img
+        <Image
           src={mediaPath}
           alt={altText}
           onLoad={onLoad}
@@ -221,6 +222,8 @@ function Works2({ project }) {
             height: "auto",
             ...style,
           }}
+          width={800}
+          height={600}
         />
       );
     }

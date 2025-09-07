@@ -1,12 +1,12 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+"use client";
+import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 // Hello messages in different languages
 const helloMessages = [
   "Hello",
   "Hola",
-  "Bonjour", 
+  "Bonjour",
   "Ciao",
   "Hallo",
   "Olá",
@@ -16,27 +16,149 @@ const helloMessages = [
   "你好",
   "مرحبا",
   "สวัสดี",
-  "Xin chào",
-  "Merhaba"
 ];
 
 // Page-specific messages
 const pageMessages = {
-  '/': helloMessages,
-  '/work': ['Work', 'Trabajo', 'Travail', 'Lavoro', 'Arbeit', 'Trabalho'],
-  '/work/': ['Work', 'Trabajo', 'Travail', 'Lavoro', 'Arbeit', 'Trabalho'],
-  '/capabilities': ['Capabilities', 'Capacidades', 'Capacités', 'Capacità', 'Fähigkeiten', 'Capacidades'],
-  '/capabilities/': ['Capabilities', 'Capacidades', 'Capacités', 'Capacità', 'Fähigkeiten', 'Capacidades'],
-  '/about': ['About', 'Sobre', 'À propos', 'Su di', 'Über', 'Sobre'],
-  '/about/': ['About', 'Sobre', 'À propos', 'Su di', 'Über', 'Sobre'],
-  '/contact': ['Contact', 'Contacto', 'Contact', 'Contatto', 'Kontakt', 'Contato'],
-  '/contact/': ['Contact', 'Contacto', 'Contact', 'Contatto', 'Kontakt', 'Contato'],
-  '/team': ['Team', 'Equipo', 'Équipe', 'Squadra', 'Team', 'Equipe'],
-  '/team/': ['Team', 'Equipo', 'Équipe', 'Squadra', 'Team', 'Equipe'],
-  '/blog': ['Blog', 'Blog', 'Blog', 'Blog', 'Blog', 'Blog'],
-  '/blog/': ['Blog', 'Blog', 'Blog', 'Blog', 'Blog', 'Blog'],
-  '/faqs': ['FAQs', 'Preguntas', 'FAQ', 'FAQ', 'FAQ', 'FAQ'],
-  '/faqs/': ['FAQs', 'Preguntas', 'FAQ', 'FAQ', 'FAQ', 'FAQ']
+  "/": helloMessages,
+  "/work": [
+    "Work",
+    "Proyectos",
+    "Projets",
+    "Projetti",
+    "Projekte",
+    "Projetos",
+    "Работы",
+    "作品",
+    "작업물",
+    "项目",
+    "الأعمال",
+    "ผลงาน",
+  ],
+  "/work/": [
+    "Work",
+    "Proyectos",
+    "Projets",
+    "Projetti",
+    "Projekte",
+    "Projetos",
+    "Работы",
+    "作品",
+    "작업물",
+    "项目",
+    "الأعمال",
+    "ผลงาน",
+  ],
+  "/capabilities": [
+    "Capabilities",
+    "Servicios",
+    "Compétences",
+    "Competenze",
+    "Kompetenzen",
+    "Competências",
+    "Возможности",
+    "サービス",
+    "서비스",
+    "能力",
+    "القدرات",
+    "ความสามารถ",
+  ],
+  "/capabilities/": [
+    "Capabilities",
+    "Servicios",
+    "Compétences",
+    "Competenze",
+    "Kompetenzen",
+    "Competências",
+    "Возможности",
+    "サービス",
+    "서비스",
+    "能力",
+    "القدرات",
+    "ความสามารถ",
+  ],
+  "/about": [
+    "About",
+    "Sobre mí",
+    "À propos",
+    "Chi sono",
+    "Über mich",
+    "Sobre mim",
+    "Обо мне",
+    "自己紹介",
+    "소개",
+    "关于我",
+    "من أنا",
+    "เกี่ยวกับฉัน",
+  ],
+  "/about/": [
+    "About",
+    "Sobre mí",
+    "À propos",
+    "Chi sono",
+    "Über mich",
+    "Sobre mim",
+    "Обо мне",
+    "自己紹介",
+    "소개",
+    "关于我",
+    "من أنا",
+    "เกี่ยวกับฉัน",
+  ],
+  "/contact": [
+    "Contact",
+    "Contacto",
+    "Contatti",
+    "Kontakt",
+    "Contato",
+    "Контакты",
+    "お問い合わせ",
+    "연락처",
+    "	联系",
+    "تواصل",
+    "ติดต่อ",
+  ],
+  "/contact/": [
+    "Contact",
+    "Contacto",
+    "Contatti",
+    "Kontakt",
+    "Contato",
+    "Контакты",
+    "お問い合わせ",
+    "연락처",
+    "	联系",
+    "تواصل",
+    "ติดต่อ",
+  ],
+  "/team": [
+    "Team",
+    "Equipo",
+    "Équipe",
+    "Equipe",
+    "Команда",
+    "チーム",
+    "팀",
+    "团队",
+    "الفريق",
+    "ทีมงาน",
+  ],
+  "/team/": [
+    "Team",
+    "Equipo",
+    "Équipe",
+    "Equipe",
+    "Команда",
+    "チーム",
+    "팀",
+    "团队",
+    "الفريق",
+    "ทีมงาน",
+  ],
+  "/blog": ["Blog", "Блог", "ブログ", "블로그", "博客", "مدونة", "บล็อก"],
+  "/blog/": ["Blog", "Блог", "ブログ", "블로그", "博客", "مدونة", "บล็อก"],
+  "/faqs": ["FAQs"],
+  "/faqs/": ["FAQs"],
 };
 
 // Function to fetch project title from JSON file
@@ -45,39 +167,43 @@ const fetchProjectTitle = async (slug) => {
     // Add timeout to prevent hanging
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 2000); // 2 second timeout
-    
+
     const response = await fetch(`/api/project/${slug}`, {
-      signal: controller.signal
+      signal: controller.signal,
     });
-    
+
     clearTimeout(timeoutId);
-    
+
     if (response.ok) {
       const project = await response.json();
       return project.title;
     }
   } catch (error) {
-    console.error('Error fetching project title:', error);
+    console.error("Error fetching project title:", error);
   }
   return null;
 };
 
 function LoadingScreen() {
   const pathname = usePathname();
-  const [currentMessage, setCurrentMessage] = useState('');
+  const [currentMessage, setCurrentMessage] = useState("");
   const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setMounted(true);
-    
+
     const initializeLoader = async () => {
       let messages = pageMessages[pathname] || helloMessages;
       let projectTitle = null;
 
       // Check if we're navigating to a project page
-      if (pathname.startsWith('/work/') && pathname !== '/work' && pathname !== '/work/') {
-        const slug = pathname.split('/work/')[1];
+      if (
+        pathname.startsWith("/work/") &&
+        pathname !== "/work" &&
+        pathname !== "/work/"
+      ) {
+        const slug = pathname.split("/work/")[1];
         if (slug) {
           // Try to fetch project title immediately
           projectTitle = await fetchProjectTitle(slug);
@@ -89,7 +215,8 @@ function LoadingScreen() {
         }
       } else {
         // Select initial message for non-project pages
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const randomMessage =
+          messages[Math.floor(Math.random() * messages.length)];
         setCurrentMessage(randomMessage);
       }
 
@@ -97,7 +224,8 @@ function LoadingScreen() {
       let messageInterval;
       if (!projectTitle) {
         messageInterval = setInterval(() => {
-          const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+          const randomMessage =
+            messages[Math.floor(Math.random() * messages.length)];
           setCurrentMessage(randomMessage);
         }, 1000);
       }
@@ -107,15 +235,15 @@ function LoadingScreen() {
         if (messageInterval) {
           clearInterval(messageInterval);
         }
-        
-        const svg = document.getElementById('svg');
+
+        const svg = document.getElementById("svg");
         if (!svg) return;
 
         const tl = window.gsap.timeline();
-        const curve = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
-        const flat = 'M0 2S175 1 500 1s500 1 500 1V0H0Z';
+        const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+        const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-        tl.to('.loader-wrap-heading .load-text , .loader-wrap-heading .cont', {
+        tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
           delay: 0.5,
           y: -100,
           opacity: 0,
@@ -123,23 +251,23 @@ function LoadingScreen() {
         tl.to(svg, {
           duration: 0.5,
           attr: { d: curve },
-          ease: 'power2.easeIn',
+          ease: "power2.easeIn",
         }).to(svg, {
           duration: 0.5,
           attr: { d: flat },
-          ease: 'power2.easeOut',
+          ease: "power2.easeOut",
         });
-        tl.to('.loader-wrap', { y: -1500 });
-        tl.to('.loader-wrap', { zIndex: -1, display: 'none' });
-        tl.from('header', { y: 200 }, '-=1.5');
+        tl.to(".loader-wrap", { y: -1500 });
+        tl.to(".loader-wrap", { zIndex: -1, display: "none" });
+        tl.from("header", { y: 200 }, "-=1.5");
         tl.from(
-          'header .container',
+          "header .container",
           { y: 40, opacity: 0, delay: 0.3 },
-          '-=1.5'
+          "-=1.5"
         );
-        
+
         // Add loaded class to body to show main content
-        document.body.classList.add('loaded');
+        document.body.classList.add("loaded");
 
         setIsLoading(false);
       };
@@ -148,9 +276,11 @@ function LoadingScreen() {
       const waitForReady = () => {
         return new Promise((resolve) => {
           const checkReady = () => {
-            if (typeof window !== 'undefined' && 
-                typeof window.gsap !== 'undefined' && 
-                document.readyState === 'complete') {
+            if (
+              typeof window !== "undefined" &&
+              typeof window.gsap !== "undefined" &&
+              document.readyState === "complete"
+            ) {
               resolve();
             } else {
               setTimeout(checkReady, 50);
@@ -189,9 +319,13 @@ function LoadingScreen() {
 
       <div className="loader-wrap-heading">
         <div className="load-text">
-          {currentMessage ? currentMessage.split('').map((letter, index) => (
-            <span key={index}>{letter === ' ' ? '\u00A0' : letter}</span>
-          )) : (
+          {currentMessage ? (
+            currentMessage
+              .split("")
+              .map((letter, index) => (
+                <span key={index}>{letter === " " ? "\u00A0" : letter}</span>
+              ))
+          ) : (
             <span></span>
           )}
         </div>

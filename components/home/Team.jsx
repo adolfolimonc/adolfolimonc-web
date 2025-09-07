@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import data from "@/data/team-t";
 function Team() {
   return (
@@ -14,12 +15,12 @@ function Team() {
                 </span>
               </h3>
             </div>
-           <div className="ml-auto vi-more">
+            <div className="ml-auto vi-more">
               <a href="/about" className="butn butn-sm butn-bord radius-30">
                 <span>Know more</span>
               </a>
               <span className="icon ti-arrow-top-right"></span>
-            </div> 
+            </div>
           </div>
         </div>
         <div className="row md-marg">
@@ -28,23 +29,37 @@ function Team() {
               <div className="item mb-50">
                 <div className="bg-blur">
                   <div className="img">
-                    <img src={item.img} alt="" />
+                    <Image src={item.img} alt="" width={300} height={400} />
                     <div className="social">
                       <div className="links">
-                        <a href="https://github.com/adolfolimonc" target="_blank">
+                        <a
+                          href="https://github.com/adolfolimonc"
+                          target="_blank"
+                        >
                           <i className="fab fa-github"></i>
                         </a>
-                        <a href="https://www.behance.net/adolfolimonc" target="_blank">
+                        <a
+                          href="https://www.behance.net/adolfolimonc"
+                          target="_blank"
+                        >
                           <i className="fab fa-behance"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/adolfolimonc/" target="_blank">
+                        <a
+                          href="https://www.linkedin.com/in/adolfolimonc/"
+                          target="_blank"
+                        >
                           <i className="fab fa-linkedin"></i>
                         </a>
                       </div>
                     </div>
                   </div>
                   <div className="circle-blur">
-                    <img src="/assets/imgs/patterns/blur1.png" alt="" />
+                    <Image
+                      src="/assets/imgs/patterns/blur1.png"
+                      alt=""
+                      width={200}
+                      height={200}
+                    />
                   </div>
                 </div>
                 <div className="cont pt-30">
@@ -56,7 +71,7 @@ function Team() {
               </div>
             </div>
           ))}
-{/*
+          {/*
           <div className="col-lg-3 col-md-6">
             <div className="item-bord d-flex align-items-center justify-content-center mb-50">
               <div>
@@ -73,7 +88,7 @@ function Team() {
         </div>
       </div>
       {/*<div className="circle-blur">
-        <img src="/assets/imgs/patterns/blur1.png" alt="" />
+        <Image src="/assets/imgs/patterns/blur1.png" alt="" width={200} height={200} />
       </div>*/}
     </section>
   );

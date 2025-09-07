@@ -1,16 +1,17 @@
-'use client';
-import React, { useEffect, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
-import loadBackgroudImages from '@/common/loadBackgroudImages';
+"use client";
+import React, { useEffect, useLayoutEffect } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import loadBackgroudImages from "@/common/loadBackgroudImages";
 function Header() {
   useLayoutEffect(() => {
     const tl = gsap.timeline();
-    tl.fromTo('.header', { y: 200 }, { y: 0 }, '+=2.5');
+    tl.fromTo(".header", { y: 200 }, { y: 0 }, "+=2.5");
     tl.fromTo(
-      '.header .container',
+      ".header .container",
       { opacity: 0, translateY: 40 },
       { opacity: 1, translateY: 0 },
-      '-=0'
+      "-=0"
     );
 
     return () => tl.kill();
@@ -42,10 +43,12 @@ function Header() {
                   <div className="author-info">
                     <div className="d-flex align-items-center">
                       <a href="#0" className="circle-60">
-                        <img
+                        <Image
                           src="/assets/imgs/blog/author.png"
                           alt=""
                           className="circle-img"
+                          width={60}
+                          height={60}
                         />
                       </a>
                       <a href="#0" className="ml-20">

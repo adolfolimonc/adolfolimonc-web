@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Marq2() {
-  const marquess = ['Let’s talk']; // Replace with your actual array
+  const marquess = ["Let’s talk"]; // Replace with your actual array
   const AllMarquess = Array(6).fill(marquess).flat();
-  const contact = ['Let’s build']; // Replace with your actual array
+  const contact = ["Let’s build"]; // Replace with your actual array
   const AllContact = Array(6).fill(contact).flat();
 
   return (
@@ -16,7 +17,12 @@ function Marq2() {
                 <h4 className="d-flex align-items-center">
                   <span>{item}</span>
                   <span className="icon-img-50 ml-40">
-                    <img src="/assets/imgs/star.png" alt="" />
+                    <Image
+                      src="/assets/imgs/star.png"
+                      alt=""
+                      width={50}
+                      height={50}
+                    />
                   </span>
                 </h4>
               </div>
@@ -26,7 +32,12 @@ function Marq2() {
                 <h4 className="d-flex align-items-center">
                   <span>{item}</span>
                   <span className="icon-img-50 ml-40">
-                    <img src="/assets/imgs/logo_outline.png" alt="" />
+                    <Image
+                      src="/assets/imgs/logo_outline.png"
+                      alt=""
+                      width={50}
+                      height={50}
+                    />
                   </span>
                 </h4>
               </div>

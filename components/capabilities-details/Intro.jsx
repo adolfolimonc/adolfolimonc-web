@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Intro() {
   return (
@@ -11,8 +12,8 @@ function Intro() {
                 <div>
                   <h6 className="sub-title main-color mb-15">Description</h6>
                   <h3 className="mb-30">
-                    We believe in the power of{' '}
-                    <span className="fw-300">individual</span>{' '}
+                    We believe in the power of{" "}
+                    <span className="fw-300">individual</span>{" "}
                     <span className="fw-300">contribution.</span>
                   </h3>
                 </div>
@@ -53,7 +54,12 @@ function Intro() {
                     </div>
                     <div className="ml-auto">
                       <div className="icon-img-40">
-                        <img src="/assets/imgs/arw0.png" alt="" />
+                        <Image
+                          src="/assets/imgs/arw0.png"
+                          alt=""
+                          width={40}
+                          height={40}
+                        />
                       </div>
                     </div>
                   </div>
@@ -66,7 +72,12 @@ function Intro() {
                     </div>
                     <div className="ml-auto">
                       <div className="icon-img-40">
-                        <img src="/assets/imgs/arw0.png" alt="" />
+                        <Image
+                          src="/assets/imgs/arw0.png"
+                          alt=""
+                          width={40}
+                          height={40}
+                        />
                       </div>
                     </div>
                   </div>
@@ -76,7 +87,12 @@ function Intro() {
           </div>
           <div className="col-lg-4">
             <div className="img-full fit-img">
-              <img src="/assets/imgs/intro/2.jpg" alt="" />
+              <Image
+                src="/assets/imgs/intro/2.jpg"
+                alt=""
+                width={400}
+                height={600}
+              />
             </div>
           </div>
         </div>

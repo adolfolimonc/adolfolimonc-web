@@ -1,16 +1,17 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image";
 
 function Intro2() {
   function openAccordion(event) {
-    document.querySelectorAll('.accordion-info').forEach((element) => {
-      element.classList.remove('active');
+    document.querySelectorAll(".accordion-info").forEach((element) => {
+      element.classList.remove("active");
       element.style.maxHeight = 0;
-      element.parentElement.classList.remove('active');
+      element.parentElement.classList.remove("active");
     });
-    event.currentTarget.parentElement.classList.add('active');
-    event.currentTarget.nextElementSibling.style.maxHeight = '300px';
-    event.currentTarget.nextElementSibling.classList.add('active');
+    event.currentTarget.parentElement.classList.add("active");
+    event.currentTarget.nextElementSibling.style.maxHeight = "300px";
+    event.currentTarget.nextElementSibling.classList.add("active");
   }
   return (
     <section className="intro-accord">
@@ -18,15 +19,23 @@ function Intro2() {
         <div className="row xlg-marg">
           <div className="col-lg-6">
             <div className="img md-mb50">
-              <img src="/assets/imgs/plan.png" alt="" />
+              <Image
+                src="/assets/imgs/plan.png"
+                alt=""
+                width={600}
+                height={400}
+              />
             </div>
           </div>
           <div className="col-lg-6 valign">
             <div>
               <div className="sec-head mb-50">
-                <h6 className="sub-title main-color mb-15">Why work with me?</h6>
+                <h6 className="sub-title main-color mb-15">
+                  Why work with me?
+                </h6>
                 <h3>
-                  The creative process behind starts with purpose—and ends with impact.
+                  The creative process behind starts with purpose—and ends with
+                  impact.
                 </h3>
               </div>
               <div className="accordion bord">
@@ -37,8 +46,8 @@ function Intro2() {
                   </div>
                   <div className="accordion-info">
                     <p className="">
-                    A deep dive into your business, goals, and vision
-                    —so every design decision starts with truth.
+                      A deep dive into your business, goals, and vision —so
+                      every design decision starts with truth.
                     </p>
                   </div>
                 </div>
@@ -50,7 +59,8 @@ function Intro2() {
                   </div>
                   <div className="accordion-info">
                     <p className="">
-                    Together, we turn insight into impact—co-creating digital experiences that truly connect.
+                      Together, we turn insight into impact—co-creating digital
+                      experiences that truly connect.
                     </p>
                   </div>
                 </div>
@@ -62,7 +72,8 @@ function Intro2() {
                   </div>
                   <div className="accordion-info">
                     <p className="">
-                    We build digital experiences your tribe will love—and your vision will be proud of.
+                      We build digital experiences your tribe will love—and your
+                      vision will be proud of.
                     </p>
                   </div>
                 </div>

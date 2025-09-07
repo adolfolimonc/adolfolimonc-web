@@ -1,7 +1,8 @@
-'use client';
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import clients from '@/data/clients.json';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import clients from "@/data/clients.json";
 
 function Clients() {
   const swiperOptions = {
@@ -41,7 +42,7 @@ function Clients() {
           <div className="col-lg-6 col-md-10">
             <div className="sec-head text-center mb-80">
               <h3>
-              Proud to build with  <br />
+                Proud to build with <br />
                 <span className="opacity-7">purpose-driven companies.</span>
               </h3>
             </div>
@@ -59,7 +60,7 @@ function Clients() {
               <SwiperSlide key={idx}>
                 <div className="item">
                   <div className="img icon-img-100">
-                    <img src={client} alt="" />
+                    <Image src={client} alt="" width={100} height={100} />
                   </div>
                 </div>
               </SwiperSlide>
@@ -69,8 +70,8 @@ function Clients() {
         <div className="sec-bottom mt-100">
           <div className="main-bg d-flex align-items-center">
             <h6 className="fz-14 fw-400">
-              More than <span className="fw-400"> 30+  </span>
-               international clients
+              More than <span className="fw-400"> 30+ </span>
+              international clients
             </h6>
           </div>
         </div>

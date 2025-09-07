@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import projects from "@/data/projects.json";
 import { Mousewheel, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -56,8 +57,12 @@ function Portfolio() {
               <SwiperSlide key={i}>
                 <div className="item d-flex align-items-center">
                   <div className="cont">
-                    <h6 className="sub-title main-color mb-15">{item.category}</h6>
-                    <h2>{item.title} <br/> {item.subTitle}</h2>
+                    <h6 className="sub-title main-color mb-15">
+                      {item.category}
+                    </h6>
+                    <h2>
+                      {item.title} <br /> {item.subTitle}
+                    </h2>
                     <a
                       href={`/work/${item.slug}`}
                       className="butn-crev d-flex align-items-center mt-30"
@@ -71,7 +76,13 @@ function Portfolio() {
                     </a>
                   </div>
                   <div className="img">
-                    <img src={item.thumbnail_home} alt="" className="radius-15" />
+                    <Image
+                      src={item.thumbnail_home}
+                      alt=""
+                      className="radius-15"
+                      width={600}
+                      height={400}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
@@ -79,10 +90,7 @@ function Portfolio() {
           </Swiper>
         </div>
         <div className="vi-more d-flex justify-content-center mt-50">
-          <a
-            href="/work"
-            className="butn butn-sm butn-bord radius-30 ml-3"
-          >
+          <a href="/work" className="butn butn-sm butn-bord radius-30 ml-3">
             <span>View All</span>
           </a>
           <span className="icon ti-arrow-top-right"></span>

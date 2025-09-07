@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Blog() {
   return (
@@ -37,7 +38,12 @@ function Blog() {
                 </div>
               </div>
               <div className="img fit-img">
-                <img src="/assets/imgs/blog/1.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/blog/1.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
               </div>
               <div className="cont pt-30">
                 <h5>Design Inspiration: Where to Find Creative Ideas</h5>
@@ -66,7 +72,12 @@ function Blog() {
                 </div>
               </div>
               <div className="img fit-img">
-                <img src="/assets/imgs/blog/2.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/blog/2.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
               </div>
               <div className="cont pt-30">
                 <h5>Typography: Choosing Fonts for Maximum Impact</h5>
@@ -95,7 +106,12 @@ function Blog() {
                 </div>
               </div>
               <div className="img fit-img">
-                <img src="/assets/imgs/blog/3.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/blog/3.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
               </div>
               <div className="cont pt-30">
                 <h5>Design Inspiration: Where to Find Creative Ideas</h5>

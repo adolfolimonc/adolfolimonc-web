@@ -1,20 +1,21 @@
-'use client';
-import isInView from '@/common/isInView';
-import React, { useEffect } from 'react';
+"use client";
+import isInView from "@/common/isInView";
+import React, { useEffect } from "react";
+import Image from "next/image";
 
 function Intro() {
   function handleShowProgressValues() {
     isInView({
-      selector: '.skill-progress .progres',
+      selector: ".skill-progress .progres",
       isElements: true,
       callback: (element) => {
-        element.style.width = element.getAttribute('data-value');
+        element.style.width = element.getAttribute("data-value");
       },
     });
   }
   useEffect(() => {
-    window.addEventListener('scroll', handleShowProgressValues);
-    return () => window.removeEventListener('scroll', handleShowProgressValues);
+    window.addEventListener("scroll", handleShowProgressValues);
+    return () => window.removeEventListener("scroll", handleShowProgressValues);
   }, []);
   return (
     <section className="team-single section-padding pb-0">
@@ -22,7 +23,12 @@ function Intro() {
         <div className="row md-marg justify-content-around bord">
           <div className="col-lg-5">
             <div className="img md-mb50">
-              <img src="/assets/imgs/team/t5.jpg" alt="" />
+              <Image
+                src="/assets/imgs/team/t5.jpg"
+                alt=""
+                width={400}
+                height={500}
+              />
             </div>
           </div>
           <div className="col-lg-6 valign">
@@ -39,7 +45,7 @@ function Intro() {
               <div className="info mt-30">
                 <ul className="rest">
                   <li className="mb-25 fz-18">
-                    <span className="sub-title mr-15">RESPONSIBILITY :</span>{' '}
+                    <span className="sub-title mr-15">RESPONSIBILITY :</span>{" "}
                     Designer
                   </li>
                   <li className="mb-25 fz-18">
@@ -51,7 +57,7 @@ function Intro() {
                     Fub 1995
                   </li>
                   <li className="mb-25 fz-18">
-                    <span className="sub-title mr-15">Email :</span>{' '}
+                    <span className="sub-title mr-15">Email :</span>{" "}
                     Aron_Bowers@domain.com
                   </li>
                   <li className="fz-18">

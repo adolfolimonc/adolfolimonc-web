@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Intro() {
   return (
@@ -20,7 +21,13 @@ function Intro() {
         <div className="row md-marg align-items-end">
           <div className="col-lg-6">
             <div className="img md-mb50">
-              <img src="/assets/imgs/intro/2.jpg" alt="" className="radius-15"/>
+              <Image
+                src="/assets/imgs/intro/2.jpg"
+                alt=""
+                className="radius-15"
+                width={600}
+                height={800}
+              />
               <div className="exp">
                 <h3>4+</h3>
                 <h6>

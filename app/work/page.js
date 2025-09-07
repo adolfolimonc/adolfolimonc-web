@@ -1,23 +1,23 @@
-import generateStylesheetsObject from '@/common/generateStylesheetsObject';
-import Lines from '@/components/common/Lines';
-import ProgressScroll from '@/components/common/ProgressScroll';
-import Cursor from '@/components/common/cusor';
-import LoadingScreen from '@/components/common/loader';
-import Footer from '@/components/common/Footer';
-import Marq2 from '@/components/common/Marq2';
-import Navbar from '@/components/common/Navbar';
-import Script from 'next/script';
-import Header from '@/components/work/Header';
-import Portfolio from '@/components/work/Portfolio';
+import generateStylesheetsObject from "@/common/generateStylesheetsObject";
+import Lines from "@/components/common/Lines";
+import ProgressScroll from "@/components/common/ProgressScroll";
+import Cursor from "@/components/common/cusor";
+import LoadingScreen from "@/components/common/loader";
+import Footer from "@/components/common/Footer";
+import Marq2 from "@/components/common/Marq2";
+import Navbar from "@/components/common/Navbar";
+import Script from "next/script";
+import Header from "@/components/work/Header";
+import Portfolio from "@/components/work/Portfolio";
 
 export const metadata = {
-  title: 'Work • adolfolimonc — Designer Web Developer',
+  title: "Work • adolfolimonc — Designer Web Developer",
   icons: {
-    icon: '/assets/imgs/favicon.ico',
-    shortcut: '/assets/imgs/favicon.ico',
+    icon: "/assets/imgs/favicon.ico",
+    shortcut: "/assets/imgs/favicon.ico",
     other: generateStylesheetsObject([
-      '/assets/css/plugins.css',
-      '/assets/css/style.css',
+      "/assets/css/plugins.css",
+      "/assets/css/style.css",
     ]),
   },
 };

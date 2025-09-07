@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import data from "@/data/services";
 
 function Feat() {
@@ -13,9 +14,7 @@ function Feat() {
             <div>
               <span className="sub-title main-color mb-5">Featured</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
-                <span className="rotate-text">
-                  Capabilities
-                </span>
+                <span className="rotate-text">Capabilities</span>
               </h3>
             </div>
             <div className="ml-auto vi-more">
@@ -34,7 +33,7 @@ function Feat() {
             <div key={i} className="col-lg-3 col-md-6">
               <div className="item-box radius-15 md-mb50">
                 <div className="icon-img-70 mb-40 opacity-5">
-                  <img src={item.img} alt="" />
+                  <Image src={item.img} alt="" width={70} height={70} />
                 </div>
                 <h6 className="mb-25">{item.title}</h6>
                 <p>{item.desc.slice(0, 60)}</p>

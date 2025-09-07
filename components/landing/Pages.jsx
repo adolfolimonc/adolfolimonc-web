@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Pages() {
   return (
@@ -19,104 +20,204 @@ function Pages() {
               <div className="box">
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/1.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/1.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/19.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/19.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/2.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/2.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/18.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/18.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/3.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/3.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/17.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/17.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/4.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/4.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/16.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/16.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/5.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/5.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/15.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/15.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
               </div>
               <div className="box">
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/1.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/1.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/19.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/19.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/2.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/2.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/18.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/18.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/3.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/3.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/17.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/17.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/4.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/4.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/16.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/16.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/5.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/5.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/15.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/15.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
               </div>
@@ -129,94 +230,184 @@ function Pages() {
               <div className="box">
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/6.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/6.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/14.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/14.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/7.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/7.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/13.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/13.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/8.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/8.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/12.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/12.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/9.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/9.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/11.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/11.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/10.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/10.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
               </div>
               <div className="box">
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/6.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/6.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/14.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/14.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/7.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/7.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/13.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/13.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/8.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/8.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/12.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/12.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/9.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/9.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/11.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/11.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
                 <div className="item">
                   <div className="img">
-                    <img src="/landing-preview/img/pages/10.png" alt="" />
+                    <Image
+                      src="/landing-preview/img/pages/10.png"
+                      alt=""
+                      width={300}
+                      height={400}
+                    />
                   </div>
                 </div>
               </div>

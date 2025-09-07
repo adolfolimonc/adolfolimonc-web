@@ -1,16 +1,17 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image";
 
 function FAQS() {
   function openAccordion(event) {
-    document.querySelectorAll('.accordion-info').forEach((element) => {
-      element.classList.remove('active');
+    document.querySelectorAll(".accordion-info").forEach((element) => {
+      element.classList.remove("active");
       element.style.maxHeight = 0;
-      element.parentElement.classList.remove('active');
+      element.parentElement.classList.remove("active");
     });
-    event.currentTarget.parentElement.classList.add('active');
-    event.currentTarget.nextElementSibling.style.maxHeight = '300px';
-    event.currentTarget.nextElementSibling.classList.add('active');
+    event.currentTarget.parentElement.classList.add("active");
+    event.currentTarget.nextElementSibling.style.maxHeight = "300px";
+    event.currentTarget.nextElementSibling.classList.add("active");
   }
   return (
     <section className="page-faqs section-padding pb-0 position-re">
@@ -82,13 +83,23 @@ function FAQS() {
         </div>
       </div>
       <div className="img1">
-        <img src="/assets/imgs/intro/03.jpg" alt="" />
+        <Image
+          src="/assets/imgs/intro/03.jpg"
+          alt=""
+          width={300}
+          height={400}
+        />
       </div>
       <div className="img2">
-        <img src="/assets/imgs/arw0.png" alt="" />
+        <Image src="/assets/imgs/arw0.png" alt="" width={100} height={100} />
       </div>
       <div className="img3">
-        <img src="/assets/imgs/intro/04.jpg" alt="" />
+        <Image
+          src="/assets/imgs/intro/04.jpg"
+          alt=""
+          width={300}
+          height={400}
+        />
       </div>
     </section>
   );

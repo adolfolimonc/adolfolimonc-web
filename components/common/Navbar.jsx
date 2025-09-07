@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 
 function Navbar() {
   const router = useRouter();
@@ -69,7 +70,12 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
         <a className="logo icon-img-100" href="/">
-          <img src="/assets/imgs/logo-light.png" alt="logo" />
+          <Image
+            src="/assets/imgs/logo-light.png"
+            alt="logo"
+            width={100}
+            height={40}
+          />
         </a>
 
         <button
@@ -102,9 +108,7 @@ function Navbar() {
               <a
                 className="nav-link"
                 href="/work"
-                onClick={(e) =>
-                  handleNavLinkClick(e, "selected-work", "/work")
-                }
+                onClick={(e) => handleNavLinkClick(e, "selected-work", "/work")}
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"

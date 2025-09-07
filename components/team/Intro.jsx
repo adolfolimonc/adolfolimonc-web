@@ -1,20 +1,21 @@
-'use client';
-import isInView from '@/common/isInView';
-import React, { useEffect } from 'react';
+"use client";
+import isInView from "@/common/isInView";
+import React, { useEffect } from "react";
+import Image from "next/image";
 
 function Intro() {
   function handleShowProgressValues() {
     isInView({
-      selector: '.skill-progress .progres',
+      selector: ".skill-progress .progres",
       isElements: true,
       callback: (element) => {
-        element.style.width = element.getAttribute('data-value');
+        element.style.width = element.getAttribute("data-value");
       },
     });
   }
   useEffect(() => {
-    window.addEventListener('scroll', handleShowProgressValues);
-    return () => window.removeEventListener('scroll', handleShowProgressValues);
+    window.addEventListener("scroll", handleShowProgressValues);
+    return () => window.removeEventListener("scroll", handleShowProgressValues);
   }, []);
   return (
     <section className="intro-skill section-padding pb-0">
@@ -51,13 +52,28 @@ function Intro() {
           <div className="col-lg-6">
             <div className="imgs">
               <div className="img1">
-                <img src="/assets/imgs/intro/2.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/intro/2.jpg"
+                  alt=""
+                  width={300}
+                  height={400}
+                />
               </div>
               <div className="img2">
-                <img src="/assets/imgs/intro/03.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/intro/03.jpg"
+                  alt=""
+                  width={300}
+                  height={400}
+                />
               </div>
               <div className="img3">
-                <img src="/assets/imgs/intro/04.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/intro/04.jpg"
+                  alt=""
+                  width={300}
+                  height={400}
+                />
               </div>
             </div>
           </div>

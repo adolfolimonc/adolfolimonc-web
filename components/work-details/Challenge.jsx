@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 function Challenge({ project }) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -13,7 +14,7 @@ function Challenge({ project }) {
   const mediaLink = project?.gifImagesLinks?.[0]; // New optional link field
 
   // Check if the file is a video (MP4)
-  const isVideo = mediaPath && mediaPath.toLowerCase().endsWith('.mp4');
+  const isVideo = mediaPath && mediaPath.toLowerCase().endsWith(".mp4");
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -37,7 +38,7 @@ function Challenge({ project }) {
 
   // Initialize WOW.js for animations
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.WOW) {
+    if (typeof window !== "undefined" && window.WOW) {
       new window.WOW().init();
     }
   }, []);
@@ -46,15 +47,15 @@ function Challenge({ project }) {
   const renderMedia = () => {
     if (!imageError && !videoError && mediaPath) {
       const mediaContent = isVideo ? (
-        <video 
-          src={mediaPath} 
+        <video
+          src={mediaPath}
           onLoadedData={handleVideoLoad}
           onError={handleVideoError}
-          style={{ 
+          style={{
             opacity: videoLoaded ? 1 : 0.7,
-            transition: 'opacity 0.3s ease',
-            width: '100%',
-            height: 'auto'
+            transition: "opacity 0.3s ease",
+            width: "100%",
+            height: "auto",
           }}
           autoPlay
           muted
@@ -63,28 +64,30 @@ function Challenge({ project }) {
           controls={false}
         />
       ) : (
-        <img 
-          src={mediaPath} 
-          alt={`${project?.title || "Project"} GIF`} 
+        <Image
+          src={mediaPath}
+          alt={`${project?.title || "Project"} GIF`}
           onLoad={handleImageLoad}
           onError={handleImageError}
-          style={{ 
+          style={{
             opacity: imageLoaded ? 1 : 0.7,
-            transition: 'opacity 0.3s ease',
-            width: '100%',
-            height: 'auto'
+            transition: "opacity 0.3s ease",
+            width: "100%",
+            height: "auto",
           }}
+          width={800}
+          height={600}
         />
       );
 
       // If there's a link, wrap the media in an anchor tag
       if (mediaLink) {
         return (
-          <a 
-            href={mediaLink} 
-            target="_blank" 
+          <a
+            href={mediaLink}
+            target="_blank"
             rel="noopener noreferrer"
-            style={{ display: 'block', textDecoration: 'none' }}
+            style={{ display: "block", textDecoration: "none" }}
           >
             {mediaContent}
           </a>
@@ -95,12 +98,16 @@ function Challenge({ project }) {
     }
 
     return (
-      <div className="error-placeholder wow fadeInUp" data-wow-delay=".1s" style={{
-        padding: '40px',
-        textAlign: 'center',
-        backgroundColor: '#f5f5f5',
-        borderRadius: '8px'
-      }}>
+      <div
+        className="error-placeholder wow fadeInUp"
+        data-wow-delay=".1s"
+        style={{
+          padding: "40px",
+          textAlign: "center",
+          backgroundColor: "#f5f5f5",
+          borderRadius: "8px",
+        }}
+      >
         <p>Media file could not be loaded</p>
       </div>
     );
@@ -111,12 +118,15 @@ function Challenge({ project }) {
       <div className="container">
         <div className="section-padding pt-0">
           <div className="container">
-          <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
+            <div className="img md-mb30 wow fadeInUp" data-wow-delay=".1s">
               {renderMedia()}
             </div>
           </div>
         </div>
-        <div className="info mb-80 pb-20 bord-thin-bottom wow fadeInUp" data-wow-delay=".2s">
+        <div
+          className="info mb-80 pb-20 bord-thin-bottom wow fadeInUp"
+          data-wow-delay=".2s"
+        >
           <div className="row">
             <div className="col-md-6 col-lg-3">
               <div className="item mb-30">
@@ -144,7 +154,10 @@ function Challenge({ project }) {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
+        <div
+          className="row justify-content-center wow fadeInUp"
+          data-wow-delay=".3s"
+        >
           <div className="col-lg-11">
             <div className="row">
               <div className="col-lg-5">
@@ -156,8 +169,9 @@ function Challenge({ project }) {
                     {project.content.overview}
                   </h5>
                   <p className="fz-18">
-                  {project.content.challenge}<br/>
-                  {/* <b>{project.content.rightsReserved}</b> */}
+                    {project.content.challenge}
+                    <br />
+                    {/* <b>{project.content.rightsReserved}</b> */}
                   </p>
                 </div>
               </div>

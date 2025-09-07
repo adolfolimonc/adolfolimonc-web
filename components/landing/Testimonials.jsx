@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Testimonials() {
   return (
@@ -10,7 +11,12 @@ function Testimonials() {
               <div className="col-md-4">
                 <div className="item box1 text-center mb-10">
                   <span className="icon-img-40 mb-15">
-                    <img src="/landing-preview/img/feat/1.svg" alt="" />
+                    <Image
+                      src="/landing-preview/img/feat/1.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </span>
                   <h6>Elementor</h6>
                   <span className="p-color sub-title mt-5">
@@ -21,7 +27,12 @@ function Testimonials() {
               <div className="col-md-4">
                 <div className="item box2 text-center mb-10">
                   <span className="icon-img-40 mb-15">
-                    <img src="/landing-preview/img/feat/2.svg" alt="" />
+                    <Image
+                      src="/landing-preview/img/feat/2.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </span>
                   <h6>Elementor</h6>
                   <span className="p-color sub-title mt-5">
@@ -32,7 +43,12 @@ function Testimonials() {
               <div className="col-md-4">
                 <div className="item box3 text-center mb-10">
                   <span className="icon-img-40 mb-15">
-                    <img src="/landing-preview/img/feat/3.svg" alt="" />
+                    <Image
+                      src="/landing-preview/img/feat/3.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </span>
                   <h6>Elementor</h6>
                   <span className="p-color sub-title mt-5">
@@ -43,7 +59,12 @@ function Testimonials() {
               <div className="col-md-4">
                 <div className="item box4 text-center mb-10">
                   <span className="icon-img-40 mb-15">
-                    <img src="/landing-preview/img/feat/4.svg" alt="" />
+                    <Image
+                      src="/landing-preview/img/feat/4.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </span>
                   <h6>Elementor</h6>
                   <span className="p-color sub-title mt-5">
@@ -54,7 +75,12 @@ function Testimonials() {
               <div className="col-md-4">
                 <div className="item box5 text-center mb-10">
                   <span className="icon-img-40 mb-15">
-                    <img src="/landing-preview/img/feat/5.svg" alt="" />
+                    <Image
+                      src="/landing-preview/img/feat/5.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </span>
                   <h6>Elementor</h6>
                   <span className="p-color sub-title mt-5">
@@ -65,7 +91,12 @@ function Testimonials() {
               <div className="col-md-4">
                 <div className="item box6 text-center mb-10">
                   <span className="icon-img-40 mb-15">
-                    <img src="/landing-preview/img/feat/6.svg" alt="" />
+                    <Image
+                      src="/landing-preview/img/feat/6.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
                   </span>
                   <h6>Elementor</h6>
                   <span className="p-color sub-title mt-5">

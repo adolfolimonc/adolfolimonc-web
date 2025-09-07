@@ -1,13 +1,14 @@
-'use client';
-import React from 'react';
-import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import testimonials from '@/data/testimonials.json';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import testimonials from "@/data/testimonials.json";
 
 function Testimonials() {
   const swiperOptions = {
     modules: [Navigation],
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
 
     spaceBetween: 30,
     loop: true,
@@ -22,13 +23,13 @@ function Testimonials() {
         slidesPerView: 2,
       },
       1024: {
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
       },
     },
 
     navigation: {
-      nextEl: '.testim-modern .swiper-button-next',
-      prevEl: '.testim-modern .swiper-button-prev',
+      nextEl: ".testim-modern .swiper-button-next",
+      prevEl: ".testim-modern .swiper-button-prev",
     },
   };
   return (
@@ -81,7 +82,12 @@ function Testimonials() {
                     <div className="d-flex align-items-center">
                       <div>
                         <div className="img fit-img">
-                          <img src={item.img} alt={item.name} />
+                          <Image
+                            src={item.img}
+                            alt={item.name}
+                            width={60}
+                            height={60}
+                          />
                         </div>
                       </div>
                       <div className="ml-20">

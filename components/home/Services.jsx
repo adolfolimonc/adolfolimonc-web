@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Services() {
   return (
@@ -26,9 +27,7 @@ function Services() {
             <div className="item d-flex align-items-center">
               <span className="num">01</span>
               <div>
-                <span className="sub-title main-color mb-10">
-                  Business
-                </span>
+                <span className="sub-title main-color mb-10">Business</span>
                 <h2>
                   Digital <span className="fw-200">Presence</span>
                 </h2>
@@ -42,12 +41,8 @@ function Services() {
             <div className="item d-flex align-items-center">
               <span className="num">02</span>
               <div>
-                <span className="sub-title main-color mb-10">
-                  Digital
-                </span>
-                <h2>
-                  Development
-                </h2>
+                <span className="sub-title main-color mb-10">Digital</span>
+                <h2>Development</h2>
               </div>
               <div className="ml-auto">
                 <a href="/capabilities">
@@ -74,7 +69,12 @@ function Services() {
       </div>
 
       <div className="circle-blur">
-         <img src="/assets/imgs/patterns/blur1.png" alt="" />
+        <Image
+          src="/assets/imgs/patterns/blur1.png"
+          alt=""
+          width={200}
+          height={200}
+        />
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Services() {
   return (
@@ -9,9 +10,7 @@ function Services() {
             <div>
               <span className="sub-title main-color mb-5">Featured</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
-                <span className="rotate-text">
-                  Capabilities 
-                </span>
+                <span className="rotate-text">Capabilities</span>
               </h3>
             </div>
             <div className="ml-auto vi-more">
@@ -40,14 +39,17 @@ function Services() {
             </div>
             <div className="col-lg-4">
               <div className="text md-mb80">
-                <p>
-                Listening deeply to build brands your people love.
-                </p>
+                <p>Listening deeply to build brands your people love.</p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="img fit-img">
-                <img src="/assets/imgs/serv-img/1.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/serv-img/1.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
                 <a href="/page-services-details">
                   <span className="ti-arrow-top-right"></span>
                 </a>
@@ -70,14 +72,17 @@ function Services() {
             </div>
             <div className="col-lg-4">
               <div className="text md-mb80">
-                <p>
-                Designing interfaces that serve, guide, and connect.
-                </p>
+                <p>Designing interfaces that serve, guide, and connect.</p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="img fit-img">
-                <img src="/assets/imgs/serv-img/1.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/serv-img/1.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
                 <a href="/capabilities">
                   <span className="ti-arrow-top-right"></span>
                 </a>
@@ -93,7 +98,7 @@ function Services() {
                 <div>
                   <span className="sub-title main-color mb-10">Digital</span>
                   <h2>
-                  Web & app <span className="fw-200">Development</span>
+                    Web & app <span className="fw-200">Development</span>
                   </h2>
                 </div>
               </div>
@@ -101,13 +106,18 @@ function Services() {
             <div className="col-lg-4">
               <div className="text md-mb80">
                 <p>
-                Crafting seamless sites from vision to final line of code.
+                  Crafting seamless sites from vision to final line of code.
                 </p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="img fit-img">
-                <img src="/assets/imgs/serv-img/2.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/serv-img/2.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
                 <a href="/capabilities">
                   <span className="ti-arrow-top-right"></span>
                 </a>
@@ -130,14 +140,17 @@ function Services() {
             </div>
             <div className="col-lg-4">
               <div className="text md-mb80">
-                <p>
-                Creating scroll-stopping visuals that move with purpose.
-                </p>
+                <p>Creating scroll-stopping visuals that move with purpose.</p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="img fit-img">
-                <img src="/assets/imgs/serv-img/3.jpg" alt="" />
+                <Image
+                  src="/assets/imgs/serv-img/3.jpg"
+                  alt=""
+                  width={400}
+                  height={300}
+                />
                 <a href="/capabilities">
                   <span className="ti-arrow-top-right"></span>
                 </a>

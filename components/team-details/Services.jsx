@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Services() {
   return (
@@ -49,7 +50,12 @@ function Services() {
             </div>
             <div className="col-lg-2 d-flex justify-content-center">
               <div className="icon-img-80 opacity-7">
-                <img src="/assets/imgs/serv-icons/5.png" alt="" />
+                <Image
+                  src="/assets/imgs/serv-icons/5.png"
+                  alt=""
+                  width={80}
+                  height={80}
+                />
               </div>
             </div>
           </div>
@@ -78,7 +84,12 @@ function Services() {
             </div>
             <div className="col-lg-2 d-flex justify-content-center">
               <div className="icon-img-80 opacity-7">
-                <img src="/assets/imgs/serv-icons/4.png" alt="" />
+                <Image
+                  src="/assets/imgs/serv-icons/4.png"
+                  alt=""
+                  width={80}
+                  height={80}
+                />
               </div>
             </div>
           </div>
@@ -107,7 +118,12 @@ function Services() {
             </div>
             <div className="col-lg-2 d-flex justify-content-center">
               <div className="icon-img-80 opacity-7">
-                <img src="/assets/imgs/serv-icons/3.png" alt="" />
+                <Image
+                  src="/assets/imgs/serv-icons/3.png"
+                  alt=""
+                  width={80}
+                  height={80}
+                />
               </div>
             </div>
           </div>

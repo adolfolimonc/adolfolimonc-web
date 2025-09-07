@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Blog() {
   return (
@@ -55,12 +56,22 @@ function Blog() {
                   <div className="row">
                     <div className="col-sm-6">
                       <div className="iner-img sm-mb30">
-                        <img src="/assets/imgs/blog/blog1.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/blog1.jpg"
+                          alt=""
+                          width={400}
+                          height={300}
+                        />
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="iner-img">
-                        <img src="/assets/imgs/blog/blog2.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/blog2.jpg"
+                          alt=""
+                          width={400}
+                          height={300}
+                        />
                       </div>
                     </div>
                   </div>
@@ -151,10 +162,12 @@ function Blog() {
                 <div className="flex">
                   <div className="author-img mr-30">
                     <div className="img">
-                      <img
+                      <Image
                         src="/assets/imgs/blog/author.png"
                         alt=""
                         className="circle-img"
+                        width={60}
+                        height={60}
                       />
                     </div>
                   </div>
@@ -274,7 +287,12 @@ function Blog() {
                   <div>
                     <div className="img">
                       <a href="/blog-grid-sidebar">
-                        <img src="/assets/imgs/blog/c1.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/c1.jpg"
+                          alt=""
+                          width={80}
+                          height={80}
+                        />
                         <span className="date">
                           <span>
                             14 / <br /> sep
@@ -298,7 +316,12 @@ function Blog() {
                   <div>
                     <div className="img">
                       <a href="/blog-grid-sidebar">
-                        <img src="/assets/imgs/blog/c2.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/c2.jpg"
+                          alt=""
+                          width={80}
+                          height={80}
+                        />
                         <span className="date">
                           <span>
                             14 / <br /> sep
@@ -322,7 +345,12 @@ function Blog() {
                   <div>
                     <div className="img">
                       <a href="/blog-grid-sidebar">
-                        <img src="/assets/imgs/blog/c3.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/c3.jpg"
+                          alt=""
+                          width={80}
+                          height={80}
+                        />
                         <span className="date">
                           <span>
                             14 / <br /> sep

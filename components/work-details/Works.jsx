@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 function Works({ project }) {
   const [imageLoaded1, setImageLoaded1] = useState(false);
@@ -11,7 +12,7 @@ function Works({ project }) {
   // Get image/video path and link from project data
   const image1Path = project?.gifImages[1];
   const image1Link = project?.gifImagesLinks?.[1]; // New optional link field
-  const isVideo1 = image1Path && image1Path.toLowerCase().endsWith('.mp4');
+  const isVideo1 = image1Path && image1Path.toLowerCase().endsWith(".mp4");
 
   const handleImage1Load = () => {
     setImageLoaded1(true);
@@ -35,7 +36,7 @@ function Works({ project }) {
 
   // Initialize WOW.js for animations
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.WOW) {
+    if (typeof window !== "undefined" && window.WOW) {
       new window.WOW().init();
     }
   }, []);
@@ -50,9 +51,9 @@ function Works({ project }) {
           onError={handleVideo1Error}
           style={{
             opacity: videoLoaded1 ? 1 : 0.7,
-            transition: 'opacity 0.3s ease',
-            width: '100%',
-            height: 'auto'
+            transition: "opacity 0.3s ease",
+            width: "100%",
+            height: "auto",
           }}
           autoPlay
           muted
@@ -61,28 +62,30 @@ function Works({ project }) {
           controls={false}
         />
       ) : (
-        <img
+        <Image
           src={image1Path}
           alt={`${project?.title || "Project"} work image 1`}
           onLoad={handleImage1Load}
           onError={handleImage1Error}
           style={{
             opacity: imageLoaded1 ? 1 : 0.7,
-            transition: 'opacity 0.3s ease',
-            width: '100%',
-            height: 'auto'
+            transition: "opacity 0.3s ease",
+            width: "100%",
+            height: "auto",
           }}
+          width={800}
+          height={600}
         />
       );
 
       // If there's a link, wrap the media in an anchor tag
       if (image1Link) {
         return (
-          <a 
-            href={image1Link} 
-            target="_blank" 
+          <a
+            href={image1Link}
+            target="_blank"
             rel="noopener noreferrer"
-            style={{ display: 'block', textDecoration: 'none' }}
+            style={{ display: "block", textDecoration: "none" }}
           >
             {mediaContent}
           </a>
@@ -93,16 +96,19 @@ function Works({ project }) {
     }
 
     return (
-      <div className="error-placeholder" style={{
-        padding: '40px',
-        textAlign: 'center',
-        backgroundColor: '#f5f5f5',
-        borderRadius: '8px',
-        minHeight: '200px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
+      <div
+        className="error-placeholder"
+        style={{
+          padding: "40px",
+          textAlign: "center",
+          backgroundColor: "#f5f5f5",
+          borderRadius: "8px",
+          minHeight: "200px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <p>Media could not be loaded</p>
       </div>
     );

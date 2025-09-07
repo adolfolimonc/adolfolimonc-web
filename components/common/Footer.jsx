@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 function Footer() {
-  const [localTime, setLocalTime] = useState('');
+  const [localTime, setLocalTime] = useState("");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,13 +16,13 @@ function Footer() {
     function updateTime() {
       const now = new Date();
       const options = {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
         hour12: false,
-        timeZone: 'America/Mazatlan',
+        timeZone: "America/Mazatlan",
       };
-      setLocalTime(now.toLocaleTimeString('en-US', options));
+      setLocalTime(now.toLocaleTimeString("en-US", options));
     }
     updateTime();
     const interval = setInterval(updateTime, 1000);
@@ -34,17 +35,24 @@ function Footer() {
         <div className="row justify-content-between">
           <div className="col-lg-2">
             <div className="logo icon-img-100 md-mb80">
-              <img src="/assets/imgs/logo-light.png" alt="" />
+              <Image
+                src="/assets/imgs/logo-light.png"
+                alt=""
+                width={100}
+                height={40}
+              />
             </div>
           </div>
           <div className="col-lg-4">
             <div className="column md-mb50">
               <h6 className="sub-title mb-30">Contact me!</h6>
               <h6 className="p-color fw-400">
-                Mazatlan, Sinaloa, Mexico <br /> 
+                Mazatlan, Sinaloa, Mexico <br />
               </h6>
               <h6 className="mt-30 mb-15">
-                <a href="mailto:adolfolimonc@gmail.com">adolfolimonc@gmail.com</a>
+                <a href="mailto:adolfolimonc@gmail.com">
+                  adolfolimonc@gmail.com
+                </a>
               </h6>
               <a href="tel:+526692898058" className="">
                 <span className="fz-22">+52 669 289 8058</span>
@@ -73,7 +81,7 @@ function Footer() {
           <div className="col-lg-3">
             <div className="column subscribe-minimal">
               <h6 className="sub-title mb-30">Follow me!</h6>
-       {/*       <div className="form-group mb-40">
+              {/*       <div className="form-group mb-40">
                 <input type="text" name="subscrib" placeholder="Your Email" />
                 <button>
                   <span className="ti-location-arrow"></span>
@@ -86,7 +94,11 @@ function Footer() {
                   </a>
                 </li>
                 <li className="hover-this cursor-pointer ml-10">
-                  <a href="https://github.com/adolfolimonc" target="_blank" className="hover-anim">
+                  <a
+                    href="https://github.com/adolfolimonc"
+                    target="_blank"
+                    className="hover-anim"
+                  >
                     <i className="fab fa-behance"></i>
                   </a>
                 </li>
@@ -97,10 +109,17 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="mt-20 fz-16 opacity-7" style={{ letterSpacing: '1px' }}>
-              <span role="img" aria-label="clock" className="mr-5">Local Time</span>
+            <div
+              className="mt-20 fz-16 opacity-7"
+              style={{ letterSpacing: "1px" }}
+            >
+              <span role="img" aria-label="clock" className="mr-5">
+                Local Time
+              </span>
               <br />
-              {mounted ? <span style={{ fontWeight: 'bold' }}>{localTime}</span> : null}
+              {mounted ? (
+                <span style={{ fontWeight: "bold" }}>{localTime}</span>
+              ) : null}
             </div>
           </div>
         </div>
@@ -108,15 +127,19 @@ function Footer() {
           <div className="text-center">
             <p className="fz-14">
               © 2025 adolfolimonc
-              <span className="underline main-color">
-              </span>
+              <span className="underline main-color"></span>
             </p>
           </div>
         </div>
       </div>
-     <div className="circle-blur">
-        <img src="/assets/imgs/patterns/blur1.png" alt="" />
-       </div>  
+      <div className="circle-blur">
+        <Image
+          src="/assets/imgs/patterns/blur1.png"
+          alt=""
+          width={200}
+          height={200}
+        />
+      </div>
     </footer>
   );
 }

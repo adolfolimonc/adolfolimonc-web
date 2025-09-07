@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Blogs() {
   return (
@@ -11,7 +12,12 @@ function Blogs() {
                 <div className="col-md-6">
                   <div className="item mb-50">
                     <div className="img fit-img">
-                      <img src="/assets/imgs/blog/1.jpg" alt="" />
+                      <Image
+                        src="/assets/imgs/blog/1.jpg"
+                        alt=""
+                        width={400}
+                        height={300}
+                      />
                     </div>
                     <div className="cont pt-40">
                       <div className="info sub-title p-color d-flex align-items-center mb-15">
@@ -42,7 +48,12 @@ function Blogs() {
                 <div className="col-md-6">
                   <div className="item mb-50">
                     <div className="img fit-img">
-                      <img src="/assets/imgs/blog/2.jpg" alt="" />
+                      <Image
+                        src="/assets/imgs/blog/2.jpg"
+                        alt=""
+                        width={400}
+                        height={300}
+                      />
                     </div>
                     <div className="cont pt-40">
                       <div className="info sub-title p-color d-flex align-items-center mb-15">
@@ -73,7 +84,12 @@ function Blogs() {
                 <div className="col-md-6">
                   <div className="item mb-50">
                     <div className="img fit-img">
-                      <img src="/assets/imgs/blog/3.jpg" alt="" />
+                      <Image
+                        src="/assets/imgs/blog/3.jpg"
+                        alt=""
+                        width={400}
+                        height={300}
+                      />
                     </div>
                     <div className="cont pt-40">
                       <div className="info sub-title p-color d-flex align-items-center mb-15">
@@ -104,7 +120,12 @@ function Blogs() {
                 <div className="col-md-6">
                   <div className="item mb-50">
                     <div className="img fit-img">
-                      <img src="/assets/imgs/blog/2.jpg" alt="" />
+                      <Image
+                        src="/assets/imgs/blog/2.jpg"
+                        alt=""
+                        width={400}
+                        height={300}
+                      />
                     </div>
                     <div className="cont pt-40">
                       <div className="info sub-title p-color d-flex align-items-center mb-15">
@@ -135,7 +156,12 @@ function Blogs() {
                 <div className="col-md-6">
                   <div className="item sm-mb50">
                     <div className="img fit-img">
-                      <img src="/assets/imgs/blog/1.jpg" alt="" />
+                      <Image
+                        src="/assets/imgs/blog/1.jpg"
+                        alt=""
+                        width={400}
+                        height={300}
+                      />
                     </div>
                     <div className="cont pt-40">
                       <div className="info sub-title p-color d-flex align-items-center mb-15">
@@ -166,7 +192,12 @@ function Blogs() {
                 <div className="col-md-6">
                   <div className="item">
                     <div className="img fit-img">
-                      <img src="/assets/imgs/blog/3.jpg" alt="" />
+                      <Image
+                        src="/assets/imgs/blog/3.jpg"
+                        alt=""
+                        width={400}
+                        height={300}
+                      />
                     </div>
                     <div className="cont pt-40">
                       <div className="info sub-title p-color d-flex align-items-center mb-15">
@@ -247,7 +278,12 @@ function Blogs() {
                   <div>
                     <div className="img">
                       <a href="/blog-grid-sidebar">
-                        <img src="/assets/imgs/blog/c1.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/c1.jpg"
+                          alt=""
+                          width={80}
+                          height={80}
+                        />
                         <span className="date">
                           <span>
                             14 / <br /> sep
@@ -271,7 +307,12 @@ function Blogs() {
                   <div>
                     <div className="img">
                       <a href="/blog-grid-sidebar">
-                        <img src="/assets/imgs/blog/c2.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/c2.jpg"
+                          alt=""
+                          width={80}
+                          height={80}
+                        />
                         <span className="date">
                           <span>
                             14 / <br /> sep
@@ -295,7 +336,12 @@ function Blogs() {
                   <div>
                     <div className="img">
                       <a href="/blog-grid-sidebar">
-                        <img src="/assets/imgs/blog/c3.jpg" alt="" />
+                        <Image
+                          src="/assets/imgs/blog/c3.jpg"
+                          alt=""
+                          width={80}
+                          height={80}
+                        />
                         <span className="date">
                           <span>
                             14 / <br /> sep

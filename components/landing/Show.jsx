@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 function Show() {
   return (
@@ -7,7 +8,12 @@ function Show() {
         <div className="row">
           <div className="col-lg-6">
             <div className="img md-mb50">
-              <img src="/landing-preview/img/resp.png" alt="" />
+              <Image
+                src="/landing-preview/img/resp.png"
+                alt=""
+                width={600}
+                height={400}
+              />
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1 valign">
