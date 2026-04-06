@@ -15,6 +15,7 @@ function Challenge({ project }) {
 
   // Check if the file is a video (MP4)
   const isVideo = mediaPath && mediaPath.toLowerCase().endsWith(".mp4");
+  const isGif = mediaPath && mediaPath.toLowerCase().endsWith(".gif");
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -56,6 +57,7 @@ function Challenge({ project }) {
             transition: "opacity 0.3s ease",
             width: "100%",
             height: "auto",
+            borderRadius: "8px",
           }}
           autoPlay
           muted
@@ -74,6 +76,7 @@ function Challenge({ project }) {
             transition: "opacity 0.3s ease",
             width: "100%",
             height: "auto",
+            ...(isGif ? { borderRadius: "8px", display: "block" } : {}),
           }}
           width={800}
           height={600}

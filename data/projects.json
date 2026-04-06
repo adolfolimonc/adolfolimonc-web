@@ -25,14 +25,14 @@
   },
 
   {
-    "id": "irco-content-marketing",
-    "title": "IRCO",
-    "subTitle": "Content Marketing",
-    "thumbnail": "/assets/imgs/works/irco/thumbnail.png",
-    "thumbnail_home": "/assets/imgs/works/irco/thumbnail.png",
-    "category": "Design",
-    "tags": ["social-media", "content-marketing"],
-    "slug": "irco-content-marketing",
+    "id": "pfizer-demo",
+    "title": "Pfizer",
+    "subTitle": "Video Production",
+    "thumbnail": "/assets/imgs/works/pfizer/thumbnail.png",
+    "thumbnail_home": "/assets/imgs/works/pfizer/thumbnail.png",
+    "category": "Video",
+    "tags": ["video", "content-marketing"],
+    "slug": "pfizer-demo",
     "selected": true,
     "header": true
   },
@@ -59,6 +59,18 @@
     "category": "Design",
     "tags": ["video", "content-marketing"],
     "slug": "the-inn-at-mazatlan-video",
+    "selected": true,
+    "header": true
+  },
+  {
+    "id": "solstice-health-motion",
+    "title": "Solstice Health",
+    "subTitle": "Motion Graphics",
+    "thumbnail": "/assets/imgs/works/solstice-health-motion/thumbnail.png",
+    "thumbnail_home": "/assets/imgs/works/solstice-health-motion/thumbnail.png",
+    "category": "Video",
+    "tags": ["video", "motion-graphics"],
+    "slug": "solstice-health-motion",
     "selected": true,
     "header": true
   }

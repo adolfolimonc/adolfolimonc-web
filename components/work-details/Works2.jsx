@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 
 function Works2({ project }) {
@@ -8,16 +8,28 @@ function Works2({ project }) {
   const [imageError1, setImageError1] = useState(false);
   const [videoLoaded1, setVideoLoaded1] = useState(false);
   const [videoError1, setVideoError1] = useState(false);
-  const [collectionImages, setCollectionImages] = useState([]);
   const [imageStates, setImageStates] = useState({});
   const [videoStates, setVideoStates] = useState({});
 
-  // Get image paths and links from project data - you can customize these property names
-  const image1Path = project?.gifImages[2];
-  const image1Link = project?.gifImagesLinks?.[2]; // New optional link field
-  const isVideo1 = image1Path && image1Path.toLowerCase().endsWith(".mp4");
-  const isVimeo1 = image1Path && image1Path.includes("vimeo.com");
-  const projectImages = project?.content?.images || [];
+  // Third hero slot (optional). Skip the whole block when empty — avoids a blank/placeholder bar on dark layouts.
+  const tertiaryRaw = project?.gifImages?.[2];
+  const image1Path =
+    typeof tertiaryRaw === "string" && tertiaryRaw.trim().length > 0
+      ? tertiaryRaw.trim()
+      : null;
+  const image1Link = image1Path ? project?.gifImagesLinks?.[2] : null;
+  const isVideo1 = Boolean(image1Path?.toLowerCase().endsWith(".mp4"));
+  const isVimeo1 = Boolean(image1Path?.includes("vimeo.com"));
+  const projectImages = useMemo(() => project?.content?.images || [], [project]);
+  const hasContentGalleryMedia = useMemo(
+    () =>
+      projectImages.some(
+        (img) => typeof img?.url === "string" && img.url.trim().length > 0
+      ),
+    [projectImages]
+  );
+  const hideContentGallery = project?.content?.hideContentGallery === true;
+  const showContentGallery = hasContentGalleryMedia && !hideContentGallery;
 
   // Initialize image and video states for collection images
   useEffect(() => {
@@ -202,13 +214,18 @@ function Works2({ project }) {
             backgroundColor: "#000",
             ...style,
           }}
-          controls
+          autoPlay
+          muted
+          loop
           playsInline
+          controls={false}
           preload="metadata"
-          controlsList="nodownload"
         />
       );
     } else {
+      const isGif =
+        typeof mediaPath === "string" &&
+        mediaPath.toLowerCase().endsWith(".gif");
       mediaContent = (
         <Image
           src={mediaPath}
@@ -220,6 +237,7 @@ function Works2({ project }) {
             transition: "opacity 0.3s ease",
             width: "100%",
             height: "auto",
+            ...(isGif ? { borderRadius: "8px", display: "block" } : {}),
             ...style,
           }}
           width={800}
@@ -248,39 +266,41 @@ function Works2({ project }) {
   return (
     <div className="section-padding pt-0 pb-0" style={{ marginBottom: "80px" }}>
       <div className="container">
-        {/* Original single image or video */}
-        <div className="img md-mb10 wow fadeInUp" data-wow-delay=".1s">
-          {!imageError1 && !videoError1 && image1Path ? (
-            renderMedia(
-              image1Path,
-              image1Link,
-              isVideo1,
-              isVimeo1,
-              isVideo1 || isVimeo1 ? handleVideo1Load : handleImage1Load,
-              isVideo1 || isVimeo1 ? handleVideo1Error : handleImage1Error,
-              `${project?.title || "Project"} work image 1`,
-              { marginBottom: "10px" }
-            )
-          ) : (
-            <div
-              className="error-placeholder"
-              style={{
-                padding: "40px",
-                textAlign: "center",
-                backgroundColor: "#f5f5f5",
-                borderRadius: "8px",
-                minHeight: "200px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <p>Media could not be loaded</p>
-            </div>
-          )}
-        </div>
-        {/* Collection of images or videos */}
-        {projectImages.length > 0 && (
+        {/* Optional third media (Vimeo / mp4 / image). Omitted when not configured. */}
+        {image1Path ? (
+          <div className="img md-mb10 wow fadeInUp" data-wow-delay=".1s">
+            {!imageError1 && !videoError1 ? (
+              renderMedia(
+                image1Path,
+                image1Link,
+                isVideo1,
+                isVimeo1,
+                isVideo1 || isVimeo1 ? handleVideo1Load : handleImage1Load,
+                isVideo1 || isVimeo1 ? handleVideo1Error : handleImage1Error,
+                `${project?.title || "Project"} work image 1`,
+                { marginBottom: "10px" }
+              )
+            ) : (
+              <div
+                className="error-placeholder"
+                style={{
+                  padding: "40px",
+                  textAlign: "center",
+                  backgroundColor: "#f5f5f5",
+                  borderRadius: "8px",
+                  minHeight: "200px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <p>Media could not be loaded</p>
+              </div>
+            )}
+          </div>
+        ) : null}
+        {/* For video projects, keep the cleaner media flow and hide the extra gallery grid */}
+        {showContentGallery && (
           <div className="">
             {projectImages.map((image, index) => {
               const isVid =

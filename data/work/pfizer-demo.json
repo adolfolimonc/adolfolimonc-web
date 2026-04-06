@@ -1,0 +1,36 @@
+{
+  "id": "pfizer-demo",
+  "title": "Pfizer",
+  "subTitle": "Video",
+  "client": "Pfizer",
+  "time": "1 Week",
+  "services": "Video Production",
+  "thumbnail": "/assets/imgs/works/pfizer/thumbnail.png",
+  "category": "Video",
+  "tags": ["video", "content-marketing"],
+  "year": "2023",
+  "featured": true,
+  "slug": "pfizer-demo",
+  "gifImages": [
+    "/assets/imgs/works/pfizer/01.mp4",
+    "/assets/imgs/works/pfizer/02.png",
+    "https://player.vimeo.com/video/1180577765"
+  ],
+  "gifImagesLinks": [null, null, null],
+  "content": {
+    "hideContentGallery": true,
+    "rightsReserved": "2026® — All rights reserved",
+    "overview": "Pfizer commissioned a video concept designed to help its team visualize how a GenAI SaaS service could work in practice. The goal was to communicate the platform as an intuitive, chat-based experience where users can generate a wide range of social media content simply by typing prompts into a conversational interface.",
+
+    "challenge": "The creative direction focused on making the piece feel highly dynamic, engaging, and forward-looking. The video needed to clearly convey speed, versatility, and ease of use, showing how a single interaction could unlock multiple content outputs tailored for different social platforms. Overall, the objective was to present the service as a smart, streamlined solution for scalable content creation.",
+
+    "solution": "The solution was to create a dynamic video centered on the demo experience, designed to quickly communicate the core value of the service. Its fast-paced structure helped convey the platform’s ease of use and versatility, showing how multiple types of social media content could be generated through a simple chat-based interaction. Pfizer’s visual identity was carefully respected and adapted to fit the video’s purpose, resulting in a piece that felt both on-brand and engaging.",
+
+    "images": [
+      { "url": "/assets/imgs/works/pfizer/04.png", "caption": " " },
+      { "url": "/assets/imgs/works/pfizer/05.png", "caption": " " },
+      { "url": "/assets/imgs/works/pfizer/06.png", "caption": " " },
+      { "url": "/assets/imgs/works/pfizer/07.png", "caption": " " }
+    ]
+  }
+}

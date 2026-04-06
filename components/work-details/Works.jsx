@@ -13,6 +13,7 @@ function Works({ project }) {
   const image1Path = project?.gifImages[1];
   const image1Link = project?.gifImagesLinks?.[1]; // New optional link field
   const isVideo1 = image1Path && image1Path.toLowerCase().endsWith(".mp4");
+  const isGif1 = image1Path && image1Path.toLowerCase().endsWith(".gif");
 
   const handleImage1Load = () => {
     setImageLoaded1(true);
@@ -54,6 +55,7 @@ function Works({ project }) {
             transition: "opacity 0.3s ease",
             width: "100%",
             height: "auto",
+            borderRadius: "8px",
           }}
           autoPlay
           muted
@@ -72,6 +74,7 @@ function Works({ project }) {
             transition: "opacity 0.3s ease",
             width: "100%",
             height: "auto",
+            ...(isGif1 ? { borderRadius: "8px", display: "block" } : {}),
           }}
           width={800}
           height={600}

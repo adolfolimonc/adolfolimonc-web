@@ -1,4 +1,4 @@
-// File: D:\Projects\web\adolfolimonc-web\app\capabilities\page.js
+// File: C:\Users\adolf\Projects\web\adolfolimonc-web\app\capabilities\page.js
 import * as entry from '../../../../app/capabilities/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

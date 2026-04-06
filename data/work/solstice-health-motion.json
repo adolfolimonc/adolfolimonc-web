@@ -1,0 +1,33 @@
+{
+  "id": "solstice-health-motion",
+  "title": "Solstice Health",
+  "subTitle": "Motion Graphics",
+  "client": "Solstice Health",
+  "time": "1 Week",
+  "services": "Motion Graphics",
+  "thumbnail": "/assets/imgs/works/solstice-health-motion/thumbnail.png",
+  "category": "Video",
+  "tags": ["video", "motion-graphics"],
+  "year": "2026",
+  "featured": true,
+  "slug": "solstice-health-motion",
+  "gifImages": [
+    "/assets/imgs/works/solstice-health-motion/01.mp4",
+    "/assets/imgs/works/solstice-health-motion/02.gif"
+  ],
+  "gifImagesLinks": [null, null],
+  "content": {
+    "rightsReserved": "2026® — All rights reserved",
+    "overview": "Solstice was in the process of upgrading its website, and the project focused on developing animated assets to support the new digital experience. The goal was to create visuals that felt polished, modern, and aligned with the brand’s updated direction.",
+    "challenge": "The challenge was to adapt to Solstice’s new visual identity and develop a motion design approach that felt cohesive across both UI and illustration elements. The objective was to ensure that every animated asset supported the updated brand direction while enhancing the website’s overall experience.",
+    "solution": "The solution was to explore award-winning websites as visual references and use that research to define a smoother, more contemporary animation style. From there, I developed illustrations and motion assets that felt polished, fluid, and visually connected to the website, helping create a more engaging and cohesive digital presence.",
+    "images": [
+      { "url": "/assets/imgs/works/solstice-health-motion/03.gif", "caption": " "},
+      { "url": "/assets/imgs/works/solstice-health-motion/04.gif", "caption": " "},
+      { "url": "/assets/imgs/works/solstice-health-motion/05.gif", "caption": " "},
+      { "url": "/assets/imgs/works/solstice-health-motion/06.gif", "caption": " "},
+      { "url": "/assets/imgs/works/solstice-health-motion/07.gif", "caption": " "},
+      { "url": "/assets/imgs/works/solstice-health-motion/08.mp4", "caption": " " }
+    ]
+  }
+}
