@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import projects from "@/data/projects.json";
 import { Mousewheel, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -63,7 +64,7 @@ function Portfolio() {
                     <h2>
                       {item.title} <br /> {item.subTitle}
                     </h2>
-                    <a
+                    <Link
                       href={`/work/${item.slug}`}
                       className="butn-crev d-flex align-items-center mt-30"
                     >
@@ -73,7 +74,7 @@ function Portfolio() {
                         </span>
                       </span>
                       <span className="text">View Project</span>
-                    </a>
+                    </Link>
                   </div>
                   <div className="img">
                     <Image
@@ -90,9 +91,9 @@ function Portfolio() {
           </Swiper>
         </div>
         <div className="vi-more d-flex justify-content-center mt-50">
-          <a href="/work" className="butn butn-sm butn-bord radius-30 ml-3">
+          <Link href="/work" className="butn butn-sm butn-bord radius-30 ml-3">
             <span>View All</span>
-          </a>
+          </Link>
           <span className="icon ti-arrow-top-right"></span>
         </div>
       </div>

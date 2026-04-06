@@ -1,6 +1,7 @@
 'use client';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import projects from '@/data/projects.json';
 
 function Next({ project }) {
@@ -51,9 +52,9 @@ function Next({ project }) {
                      </div>
                      <div>
                        <h6 className="sub-title fz-16 mb-5">Similar Project</h6>
-                       <a href={`/work/${similarProjects[0]?.slug}`} className="fz-40 fw-600 stroke">
+                       <Link href={`/work/${similarProjects[0]?.slug}`} className="fz-40 fw-600 stroke">
                          {similarProjects[0]?.title || "Project"}
-                       </a>
+                       </Link>
                      </div>
                    </div>
                  </div>
@@ -68,9 +69,9 @@ function Next({ project }) {
                        <div className="cont d-flex align-items-center">
                          <div>
                            <h6 className="sub-title fz-16 mb-5">Similar Project</h6>
-                           <a href={`/work/${similarProjects[1]?.slug}`} className="fz-40 fw-600 stroke">
+                           <Link href={`/work/${similarProjects[1]?.slug}`} className="fz-40 fw-600 stroke">
                              {similarProjects[1]?.title || "Project"}
-                           </a>
+                           </Link>
                          </div>
                          <div>
                            <span className="ml-30 fz-30 ti-arrow-right"></span>
@@ -85,10 +86,10 @@ function Next({ project }) {
         </div>
       </div>
       <div>
-        <a href="/work" className="all-works-butn text-center">
+        <Link href="/work" className="all-works-butn text-center">
           <span className="ti-view-grid fz-24 mb-10"></span>
           <span className="d-block fz-12 text-u ls1">all Projects</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

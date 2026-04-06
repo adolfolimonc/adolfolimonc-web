@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Footer() {
   const [localTime, setLocalTime] = useState("");
@@ -64,16 +65,16 @@ function Footer() {
               <h6 className="sub-title mb-30">Useful Links</h6>
               <ul className="rest fz-14 opacity-7">
                 <li className="mb-15">
-                  <a href="/work">Work</a>
+                  <Link href="/work">Work</Link>
                 </li>
                 <li className="mb-15">
-                  <a href="/capabilities">Capabilities</a>
+                  <Link href="/capabilities">Capabilities</Link>
                 </li>
                 <li className="mb-15">
-                  <a href="/about">About</a>
+                  <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <Link href="/contact">Contact</Link>
                 </li>
               </ul>
             </div>

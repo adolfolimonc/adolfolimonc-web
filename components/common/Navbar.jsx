@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 function Navbar() {
-  const router = useRouter();
-  const pathname = usePathname();
 
   function handleScroll() {
     const bodyScroll = window.scrollY;
@@ -48,35 +46,17 @@ function Navbar() {
     }
   }
 
-  function handleNavLinkClick(e, sectionId, redirectPage) {
-    // Allow middle-click (scroll wheel click) to work normally
-    if (e.button === 1) {
-      // Middle-click - let it work normally by not preventing default
-      return;
-    }
-
-    // Only handle left-click (button 0)
-    if (e.button !== 0) {
-      return;
-    }
-
-    e.preventDefault();
-
-    // Always redirect to the corresponding page
-    router.push(redirectPage);
-  }
-
   return (
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
-        <a className="logo icon-img-100" href="/">
+        <Link className="logo icon-img-100" href="/">
           <Image
             src="/assets/imgs/logo-light.png"
             alt="logo"
             width={100}
             height={40}
           />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -105,51 +85,43 @@ function Navbar() {
             ></li>
             <li className="nav-item"></li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link"
                 href="/work"
-                onClick={(e) => handleNavLinkClick(e, "selected-work", "/work")}
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
                 <span className="rolling-text">Work</span>
-              </a>
+              </Link>
               <div className="dropdown-menu"></div>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link"
                 href="/capabilities"
-                onClick={(e) =>
-                  handleNavLinkClick(e, "services", "/capabilities")
-                }
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
                 <span className="rolling-text">Capabilities</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/about"
-                onClick={(e) => handleNavLinkClick(e, "about", "/about")}
-              >
+              <Link className="nav-link" href="/about">
                 <span className="rolling-text">About</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="contact-button">
-          <a
+          <Link
             href="/contact"
             className="butn butn-sm butn-bg main-colorbg radius-5"
           >
             <span className="text">Let&apos;s build!</span>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
